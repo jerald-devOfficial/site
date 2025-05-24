@@ -1,0 +1,129 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+  You are an expert in TypeScript, Node.js, Next.js App Router, React, Shadcn UI, Radix UI and Tailwind.
+  
+  Code Style and Structure
+  - Write concise, technical TypeScript code with accurate examples.
+  - Use arrow functions and declarative programming patterns; avoid classes.
+  - Prefer iteration and modularization over code duplication.
+  - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+  - Structure files: exported component, subcomponents, helpers, static content, types.
+  
+  Naming Conventions
+  - Use lowercase with dashes for directories (e.g., components/auth-wizard).
+  - Favor named exports for components.
+  
+  TypeScript Usage
+  - Use TypeScript for all code; prefer interfaces over types.
+  - Avoid enums; use maps instead.
+  - Use functional components with TypeScript interfaces.
+  
+  Syntax and Formatting
+  - Use the "arrow functions" keyword for pure functions.
+  - Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+  - always use "@" absolute imports, example:
+  ```
+    import { User } from '@/models/User'
+    import type { IUserDocument } from '@/models/User'
+    import '@/styles/globals.css'
+  ```
+
+  ## API Route Patterns
+
+```typescript
+// Route Handler Pattern
+export const GET = async (
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) => {
+  try {
+    const { id } = await params
+    const user = await getUserById(id)
+    
+    if (!user) {
+      return NextResponse.json(
+        { error: 'User not found' },
+        { status: 404 }
+      )
+    }
+    
+    return NextResponse.json(user)
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    )
+  }
+}
+```
+
+## Server Actions
+
+```typescript
+// Server Action Pattern
+'use server'
+
+import { z } from 'zod'
+import { revalidatePath } from 'next/cache'
+
+const createUserSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8)
+})
+
+export const createUser = async (formData: FormData) => {
+  try {
+    const validatedData = createUserSchema.parse({
+      email: formData.get('email'),
+      password: formData.get('password')
+    })
+    
+    await client()
+    const user = await User.create(validatedData)
+    
+    revalidatePath('/users')
+    return { success: true, user }
+  } catch (error) {
+    return { success: false, error: 'Failed to create user' }
+  }
+}
+```
+
+## React Components
+```tsx
+const ReactComponent = () => (
+    <section>This is how to create react components, it should be written in arrow function and the export default will follow at the bottom
+    </section>
+)
+
+export default ReactComponent
+```
+
+  
+  
+  UI and Styling
+  - Use Shadcn UI, Radix, and Tailwind for components and styling.
+  - Implement responsive design with Tailwind CSS; use a mobile-first approach.
+  
+  Performance Optimization
+  - Minimize 'use client', 'useEffect', and 'setState'; favor React Server Components (RSC).
+  - Wrap client components in Suspense with fallback.
+  - Use dynamic loading for non-critical components.
+  - Optimize images: use WebP format, include size data, implement lazy loading.
+  
+  Key Conventions
+  - Use 'nuqs' for URL search parameter state management.
+  - Optimize Web Vitals (LCP, CLS, FID).
+  - Limit 'use client':
+    - Favor server components and Next.js SSR.
+    - Use only for Web API access in small components.
+    - Avoid for data fetching or state management.
+  
+  Follow Next.js docs for Data Fetching, Rendering, and Routing.
+
+
+  
