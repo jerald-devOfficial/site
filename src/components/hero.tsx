@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const Hero = () => (
   <section className='w-full flex flex-col items-center gap-6 py-10 bg-[#FFF7E6] border-b border-[#F5A623]/20'>
@@ -30,17 +30,10 @@ const Hero = () => (
     {/* CTA Button */}
     <a
       href='#join'
-      className='px-8 py-4 rounded-full font-bold text-white bg-[#27ae60] hover:bg-[#219150] text-xl shadow transition-colors'
-    >
+      className='px-8 py-4 rounded-full font-bold text-white bg-[#27ae60] hover:bg-[#219150] text-xl shadow transition-colors'>
       Join Now – List Your First Item in 60 Seconds!
     </a>
-    {/* Press mentions placeholder */}
-    <div className='flex gap-6 items-center mt-4 opacity-80'>
-      <span className='text-xs text-[#555]'>Featured in</span>
-      <div className='w-24 h-6 bg-[#F5A623]/30 rounded' />
-      <div className='w-24 h-6 bg-[#0ea5e9]/20 rounded' />
-    </div>
   </section>
-)
+);
 
-export default Hero
+export default Hero;
