@@ -1,17 +1,15 @@
 const Footer = () => (
   <footer className='w-full bg-white border-t border-[#F5A623]/20 pt-8 pb-4 mt-8'>
     {/* Sticky app download bar (mobile) */}
-    <div className='fixed bottom-0 left-0 w-full bg-[#FFF7E6] flex items-center justify-center gap-4 py-3 z-40 md:hidden shadow-lg'>
+    <div className='fixed bottom-0 left-0 w-full bg-[#FFF7E6] text-black flex items-center justify-center gap-4 py-3 z-40 md:hidden shadow-lg'>
       <a
         href='#'
-        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#0ea5e9] text-white font-bold'
-      >
+        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#0ea5e9] text-white font-bold'>
         App Store
       </a>
       <a
         href='#'
-        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#27ae60] text-white font-bold'
-      >
+        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#27ae60] text-white font-bold'>
         Google Play
       </a>
     </div>
@@ -43,8 +41,7 @@ const Footer = () => (
         />
         <button
           type='submit'
-          className='px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold'
-        >
+          className='px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold'>
           Sign Up
         </button>
       </form>
@@ -70,7 +67,7 @@ const Footer = () => (
         Terms of Service
       </a>{' '}
       ·{' '}
-      <a href='#privacy' className='hover:underline'>
+      <a href='/privacy-policy' className='hover:underline'>
         Privacy Policy
       </a>{' '}
       ·{' '}
@@ -79,6 +76,6 @@ const Footer = () => (
       </a>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
