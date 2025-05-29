@@ -273,7 +273,7 @@ const PrivacyPolicy = () => {
   return (
     <div className='bg-[#F9FAFB] text-[#222] font-sans'>
       <Header />
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
+      <div className='min-h-screen bg-gradient-to-br from-slate-50 to-gray-100'>
         <div className='bg-white shadow-sm'>
           <div className='max-w-4xl mx-auto px-6 py-8'>
             <div className='flex items-center space-x-3 mb-4'>
