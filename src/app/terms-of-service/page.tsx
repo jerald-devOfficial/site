@@ -12,6 +12,7 @@ import {
 import Image from 'next/image';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import ContactInfo from '@/components/contact-info';
 
 const TermsOfService = () => {
   const sections = [
@@ -552,61 +553,10 @@ const TermsOfService = () => {
             </div>
           </div>
 
-          <div className='mt-8 bg-white rounded-lg shadow-lg overflow-hidden'>
-            <div className='bg-slate-700 text-white p-6'>
-              <h3 className='text-xl font-semibold mb-2'>
-                Questions About These Terms?
-              </h3>
-              <p className='text-slate-200'>
-                If you have any questions about these Terms of Service, please
-                contact our legal team:
-              </p>
-            </div>
-            <div className='p-6'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div className='space-y-4'>
-                  <div className='flex items-center space-x-3'>
-                    <FileText className='w-5 h-5 text-slate-600' />
-                    <div>
-                      <p className='font-medium text-gray-800'>
-                        Legal Department
-                      </p>
-                      <p className='text-gray-600'>legal@tindamo.com</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center space-x-3'>
-                    <Globe className='w-5 h-5 text-slate-600' />
-                    <div>
-                      <p className='font-medium text-gray-800'>
-                        Business Address
-                      </p>
-                      <p className='text-gray-600'>Cebu City, Philippines</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='space-y-4'>
-                  <div className='flex items-center space-x-3'>
-                    <Users className='w-5 h-5 text-slate-600' />
-                    <div>
-                      <p className='font-medium text-gray-800'>
-                        Customer Support
-                      </p>
-                      <p className='text-gray-600'>support@tindamo.com</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center space-x-3'>
-                    <Scale className='w-5 h-5 text-slate-600' />
-                    <div>
-                      <p className='font-medium text-gray-800'>
-                        Dispute Resolution
-                      </p>
-                      <p className='text-gray-600'>disputes@tindamo.com</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ContactInfo
+            title='Questions About These Terms?'
+            subtitle='If you have any questions about these Terms of Service, please contact us:'
+          />
         </div>
       </div>
       <Footer />

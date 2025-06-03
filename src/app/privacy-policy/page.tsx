@@ -1,17 +1,9 @@
 import React from 'react';
-import {
-  Shield,
-  Lock,
-  Eye,
-  Users,
-  FileText,
-  Mail,
-  Phone,
-  MapPin,
-} from 'lucide-react';
+import { Shield, Lock, Eye, Users, FileText } from 'lucide-react';
 import Header from '@/components/header';
 import Image from 'next/image';
 import Footer from '@/components/footer';
+import ContactInfo from '@/components/contact-info';
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -405,46 +397,11 @@ const PrivacyPolicy = () => {
             </div>
           </div>
 
-          <div className='mt-8 bg-white rounded-lg shadow-lg overflow-hidden'>
-            <div className='bg-blue-600 text-white p-6'>
-              <h3 className='text-xl font-semibold mb-2'>
-                Contact Information
-              </h3>
-              <p className='text-blue-100'>
-                If you have any questions, concerns, or requests regarding this
-                Privacy Policy or our data practices, please contact us:
-              </p>
-            </div>
-            <div className='p-6'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div className='space-y-4'>
-                  <div className='flex items-center space-x-3'>
-                    <Mail className='size-5 text-blue-600' />
-                    <div>
-                      <p className='font-medium text-gray-800'>Email</p>
-                      <p className='text-gray-600'>team@tindamo.store</p>
-                    </div>
-                  </div>
-                  <div className='flex items-center space-x-3'>
-                    <Phone className='size-5 text-blue-600' />
-                    <div>
-                      <p className='font-medium text-gray-800'>Phone</p>
-                      <p className='text-gray-600'>+63 966 765 2125</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='space-y-4'>
-                  <div className='flex items-start space-x-3'>
-                    <MapPin className='size-5 text-blue-600 mt-0.5' />
-                    <div>
-                      <p className='font-medium text-gray-800'>Address</p>
-                      <p className='text-gray-600'>Cebu City, Philippines</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ContactInfo
+            title='Contact Information'
+            subtitle='If you have any questions, concerns, or requests regarding this
+          Privacy Policy or our data practices, please contact us:'
+          />
         </div>
       </div>
       <Footer />
