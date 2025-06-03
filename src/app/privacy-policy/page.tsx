@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
     {
       id: 'introduction',
       title: '1. Introduction',
-      icon: <Shield className='w-5 h-5' />,
+      icon: <Shield className='size-5' />,
       content: (
         <div>
           <p className='mb-4'>
@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
     {
       id: 'information-collection',
       title: '2. Information We Collect',
-      icon: <Eye className='w-5 h-5' />,
+      icon: <Eye className='size-5' />,
       content: (
         <div>
           <h4 className='font-semibold text-gray-800 mb-3'>
@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
     {
       id: 'how-we-use',
       title: '3. How We Use Your Information',
-      icon: <Users className='w-5 h-5' />,
+      icon: <Users className='size-5' />,
       content: (
         <div>
           <p className='mb-4'>
@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
     {
       id: 'information-sharing',
       title: '4. Information Sharing and Disclosure',
-      icon: <Users className='w-5 h-5' />,
+      icon: <Users className='size-5' />,
       content: (
         <div>
           <p className='mb-4'>
@@ -198,7 +198,7 @@ const PrivacyPolicy = () => {
     {
       id: 'data-security',
       title: '5. Data Security',
-      icon: <Lock className='w-5 h-5' />,
+      icon: <Lock className='size-5' />,
       content: (
         <div>
           <p className='mb-4'>
@@ -223,7 +223,7 @@ const PrivacyPolicy = () => {
     {
       id: 'your-rights',
       title: '7. Your Privacy Rights',
-      icon: <Shield className='w-5 h-5' />,
+      icon: <Shield className='size-5' />,
       content: (
         <div>
           <p className='mb-4'>
@@ -336,7 +336,7 @@ const PrivacyPolicy = () => {
                 <section id='data-retention' className='scroll-mt-20'>
                   <div className='flex items-center space-x-3 mb-4'>
                     <div className='p-2 bg-blue-100 rounded-lg text-blue-600'>
-                      <FileText className='w-5 h-5' />
+                      <FileText className='size-5' />
                     </div>
                     <h3 className='text-xl font-semibold text-gray-800'>
                       6. Data Retention
@@ -356,7 +356,7 @@ const PrivacyPolicy = () => {
                 <section id='children-privacy' className='scroll-mt-20'>
                   <div className='flex items-center space-x-3 mb-4'>
                     <div className='p-2 bg-blue-100 rounded-lg text-blue-600'>
-                      <Shield className='w-5 h-5' />
+                      <Shield className='size-5' />
                     </div>
                     <h3 className='text-xl font-semibold text-gray-800'>
                       10. Children&apos;s Privacy
@@ -377,7 +377,7 @@ const PrivacyPolicy = () => {
                 <section id='policy-changes' className='scroll-mt-20'>
                   <div className='flex items-center space-x-3 mb-4'>
                     <div className='p-2 bg-blue-100 rounded-lg text-blue-600'>
-                      <FileText className='w-5 h-5' />
+                      <FileText className='size-5' />
                     </div>
                     <h3 className='text-xl font-semibold text-gray-800'>
                       12. Changes to This Privacy Policy
@@ -419,23 +419,23 @@ const PrivacyPolicy = () => {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div className='space-y-4'>
                   <div className='flex items-center space-x-3'>
-                    <Mail className='w-5 h-5 text-blue-600' />
+                    <Mail className='size-5 text-blue-600' />
                     <div>
                       <p className='font-medium text-gray-800'>Email</p>
-                      <p className='text-gray-600'>privacy@tindamo.com</p>
+                      <p className='text-gray-600'>team@tindamo.store</p>
                     </div>
                   </div>
                   <div className='flex items-center space-x-3'>
-                    <Phone className='w-5 h-5 text-blue-600' />
+                    <Phone className='size-5 text-blue-600' />
                     <div>
                       <p className='font-medium text-gray-800'>Phone</p>
-                      <p className='text-gray-600'>+63 123 456 7890</p>
+                      <p className='text-gray-600'>+63 966 765 2125</p>
                     </div>
                   </div>
                 </div>
                 <div className='space-y-4'>
                   <div className='flex items-start space-x-3'>
-                    <MapPin className='w-5 h-5 text-blue-600 mt-0.5' />
+                    <MapPin className='size-5 text-blue-600 mt-0.5' />
                     <div>
                       <p className='font-medium text-gray-800'>Address</p>
                       <p className='text-gray-600'>Cebu City, Philippines</p>
