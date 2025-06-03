@@ -74,7 +74,7 @@ const Footer = () => (
     </div>
     {/* Legal links */}
     <div className='mt-6 text-center text-xs text-[#555]'>
-      <Link href='#terms' className='hover:underline'>
+      <Link href='/terms-of-service' className='hover:underline'>
         Terms of Service
       </Link>{' '}
       ·{' '}

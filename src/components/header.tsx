@@ -44,9 +44,11 @@ const Header = () => (
       </Link>
     </nav>
     <Link
-      href='#join'
+      href='https://calendly.com/team-tindamo/30min'
+      rel='noopener noreferrer'
+      target='_blank'
       className='ml-4 px-5 py-2 rounded-full font-bold text-white bg-[#27ae60] hover:bg-[#219150] transition-colors'>
-      Join Now
+      Schedule A Call
     </Link>
   </header>
 );
