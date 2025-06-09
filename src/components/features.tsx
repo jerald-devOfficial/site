@@ -56,7 +56,7 @@ const Features = () => (
                         Vintage Chair
                       </span>
                     </div>
-                    <span className='text-xs text-gray-500'>0.2 mi</span>
+                    <span className='text-xs text-gray-500'>320m</span>
                   </div>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center space-x-2'>
@@ -65,7 +65,7 @@ const Features = () => (
                         Garden Tools
                       </span>
                     </div>
-                    <span className='text-xs text-gray-500'>0.8 mi</span>
+                    <span className='text-xs text-gray-500'>1.3km</span>
                   </div>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center space-x-2'>
@@ -74,7 +74,7 @@ const Features = () => (
                         Coffee Table
                       </span>
                     </div>
-                    <span className='text-xs text-gray-500'>1.1 mi</span>
+                    <span className='text-xs text-gray-500'>1.8km</span>
                   </div>
                 </div>
               </div>
@@ -185,7 +185,7 @@ const Features = () => (
                     <span className='text-sm text-gray-700'>Designer Lamp</span>
                     <div className='text-right'>
                       <div className='text-sm font-bold text-orange-600'>
-                        $45
+                        ₱1,850
                       </div>
                       <div className='text-xs text-gray-500'>2h 15m left</div>
                     </div>
@@ -196,7 +196,7 @@ const Features = () => (
                     </span>
                     <div className='text-right'>
                       <div className='text-sm font-bold text-orange-600'>
-                        $120
+                        ₱4,950
                       </div>
                       <div className='text-xs text-gray-500'>1h 42m left</div>
                     </div>
@@ -205,7 +205,7 @@ const Features = () => (
                     <span className='text-sm text-gray-700'>Art Supplies</span>
                     <div className='text-right'>
                       <div className='text-sm font-bold text-orange-600'>
-                        $25
+                        ₱1,025
                       </div>
                       <div className='text-xs text-gray-500'>4h 8m left</div>
                     </div>

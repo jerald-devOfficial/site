@@ -143,11 +143,11 @@ const TrustSafety = () => (
             </p>
             <div className='flex items-center'>
               <div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3'>
-                <span className='text-blue-600 font-semibold'>SM</span>
+                <span className='text-blue-600 font-semibold'>AS</span>
               </div>
               <div>
-                <div className='font-semibold text-gray-900'>Sarah M.</div>
-                <div className='text-sm text-gray-500'>Austin, TX</div>
+                <div className='font-semibold text-gray-900'>Ana Santos</div>
+                <div className='text-sm text-gray-500'>Quezon City</div>
               </div>
             </div>
           </div>
@@ -169,8 +169,8 @@ const TrustSafety = () => (
                 <span className='text-green-600 font-semibold'>MR</span>
               </div>
               <div>
-                <div className='font-semibold text-gray-900'>Mike R.</div>
-                <div className='text-sm text-gray-500'>Denver, CO</div>
+                <div className='font-semibold text-gray-900'>Miguel Rivera</div>
+                <div className='text-sm text-gray-500'>Makati City</div>
               </div>
             </div>
           </div>
@@ -193,8 +193,8 @@ const TrustSafety = () => (
                 <span className='text-purple-600 font-semibold'>JL</span>
               </div>
               <div>
-                <div className='font-semibold text-gray-900'>Jessica L.</div>
-                <div className='text-sm text-gray-500'>Seattle, WA</div>
+                <div className='font-semibold text-gray-900'>Jasmine Lopez</div>
+                <div className='text-sm text-gray-500'>Cebu City</div>
               </div>
             </div>
           </div>

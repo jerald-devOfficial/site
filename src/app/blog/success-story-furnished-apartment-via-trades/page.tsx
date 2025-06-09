@@ -21,14 +21,14 @@ const SuccessStoryFurnishedApartment = () => {
           </div>
         </nav>
 
-        <div className='max-w-4xl mx-auto px-4 py-8'>
-          <article className='bg-white rounded-2xl shadow-xl overflow-hidden'>
-            <header className='px-8 py-8 bg-gradient-to-r from-purple-50 to-pink-50'>
-              <h1 className='text-4xl font-black text-gray-900 mb-4 leading-tight'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8'>
+          <article className='bg-white rounded-xl sm:rounded-2xl shadow-xl overflow-hidden'>
+            <header className='px-4 sm:px-6 lg:px-8 py-6 sm:py-8 bg-gradient-to-r from-purple-50 to-pink-50'>
+              <h1 className='text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 mb-4 leading-tight'>
                 Success Story: Paano Ko Na-furnish ang Buong Apartment through
                 TindaMo Trades 🏠
               </h1>
-              <div className='flex flex-wrap items-center gap-4 text-gray-600 text-sm'>
+              <div className='flex flex-wrap items-center gap-2 sm:gap-4 text-gray-600 text-xs sm:text-sm'>
                 <span className='flex items-center gap-1'>
                   <span>📅</span> Marso 25, 2025
                 </span>
@@ -41,8 +41,8 @@ const SuccessStoryFurnishedApartment = () => {
               </div>
             </header>
 
-            <div className='p-8'>
-              <div className='relative w-full h-64 mb-8 rounded-xl overflow-hidden'>
+            <div className='p-4 sm:p-6 lg:p-8'>
+              <div className='relative w-full h-48 sm:h-56 lg:h-64 mb-6 sm:mb-8 rounded-lg sm:rounded-xl overflow-hidden'>
                 <Image
                   src='/images/blog/apartment-transformation-filipino.png'
                   alt='Filipino apartment transformation through trades'
@@ -52,7 +52,7 @@ const SuccessStoryFurnishedApartment = () => {
                 />
               </div>
 
-              <div className='prose prose-lg max-w-none'>
+              <div className='prose prose-base sm:prose-lg max-w-none'>
                 <div className='bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-400 p-6 mb-8 rounded-r-lg'>
                   <p className='text-lg text-blue-800 font-medium italic'>
                     &ldquo;From empty apartment to fully furnished home in 6

@@ -65,30 +65,35 @@ const Blog = () => {
       <div className='min-h-screen bg-gradient-to-br from-slate-50 to-gray-100'>
         {/* Blog Header */}
         <div className='bg-white shadow-sm'>
-          <div className='max-w-4xl mx-auto px-6 py-8'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
                 src='/logo.png'
                 alt='TindaMo Logo'
-                width={40}
-                height={40}
+                width={32}
+                height={32}
+                className='sm:w-10 sm:h-10'
                 sizes='100vw'
                 priority
               />
-              <h1 className='text-3xl font-bold text-gray-900'>TindaMo</h1>
+              <h1 className='text-2xl sm:text-3xl font-bold text-gray-900'>
+                TindaMo
+              </h1>
             </div>
-            <h2 className='text-2xl font-semibold text-gray-800 mb-2'>Blog</h2>
-            <p className='text-gray-600'>
+            <h2 className='text-xl sm:text-2xl font-semibold text-gray-800 mb-2'>
+              Blog
+            </h2>
+            <p className='text-sm sm:text-base text-gray-600'>
               Tips, stories, and insights from our Filipino trading community
             </p>
           </div>
         </div>
 
         {/* Blog Content */}
-        <div className='max-w-4xl mx-auto p-6'>
+        <div className='max-w-4xl mx-auto p-4 sm:p-6 lg:p-8'>
           <div className='bg-white rounded-lg shadow-lg overflow-hidden'>
-            <div className='p-8'>
-              <div className='mb-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg'>
+            <div className='p-4 sm:p-6 lg:p-8'>
+              <div className='mb-6 sm:mb-8 p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg'>
                 <div className='flex items-start space-x-3'>
                   <div className='text-2xl'>📝</div>
                   <div>

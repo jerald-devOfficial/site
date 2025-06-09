@@ -29,10 +29,10 @@ const Onboarding = () => (
               </h3>
               <p className='text-gray-600 mb-4'>
                 Browse thousands of items near you. From furniture to tools,
-                find exactly what you need in your neighborhood.
+                find exactly what you need sa inyong neighborhood.
               </p>
               <div className='bg-gray-50 rounded-lg p-3 text-sm text-gray-500'>
-                🔍 Search: &quot;coffee table&quot; within 2 miles
+                🔍 Search: &quot;coffee table&quot; within 2 kilometers
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Onboarding = () => (
                 secure chat keeps you safe while you negotiate.
               </p>
               <div className='bg-gray-50 rounded-lg p-3 text-sm text-gray-500'>
-                💬 &quot;Would you trade for my desk lamp?&quot;
+                💬 &quot;Pwede bang i-trade mo sa desk lamp ko?&quot;
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Onboarding = () => (
                 lasting community connections.
               </p>
               <div className='bg-gray-50 rounded-lg p-3 text-sm text-gray-500'>
-                📍 Meet at Starbucks on Main St
+                📍 Meet sa mall or barangay hall
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Onboarding = () => (
                   For Sale
                 </span>
                 <span className='text-blue-600 text-sm font-medium'>
-                  0.3 miles
+                  300 meters
                 </span>
               </div>
               <h4 className='font-semibold text-gray-900 mb-2'>
@@ -113,7 +113,7 @@ const Onboarding = () => (
                 Great condition, perfect for small spaces
               </p>
               <div className='flex items-center justify-between'>
-                <span className='text-lg font-bold text-blue-600'>$85</span>
+                <span className='text-lg font-bold text-blue-600'>₱3,500</span>
                 <span className='text-xs text-gray-500'>2 hours ago</span>
               </div>
             </div>
@@ -127,7 +127,7 @@ const Onboarding = () => (
                   Barter
                 </span>
                 <span className='text-green-600 text-sm font-medium'>
-                  0.7 miles
+                  700 meters
                 </span>
               </div>
               <h4 className='font-semibold text-gray-900 mb-2'>
@@ -151,7 +151,7 @@ const Onboarding = () => (
                   Auction
                 </span>
                 <span className='text-yellow-600 text-sm font-medium'>
-                  1.2 miles
+                  1.2 kilometers
                 </span>
               </div>
               <h4 className='font-semibold text-gray-900 mb-2'>
@@ -162,7 +162,7 @@ const Onboarding = () => (
               </p>
               <div className='flex items-center justify-between'>
                 <span className='text-lg font-bold text-yellow-600'>
-                  $45 bid
+                  ₱1,850 bid
                 </span>
                 <span className='text-xs text-gray-500'>⏰ 2h left</span>
               </div>

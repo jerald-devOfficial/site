@@ -21,13 +21,13 @@ const WinAuctionsGuide = () => {
           </div>
         </nav>
 
-        <div className='max-w-4xl mx-auto px-4 py-8'>
-          <article className='bg-white rounded-2xl shadow-xl overflow-hidden'>
-            <header className='px-8 py-8 bg-gradient-to-r from-blue-50 to-cyan-50'>
-              <h1 className='text-4xl font-black text-gray-900 mb-4 leading-tight'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8'>
+          <article className='bg-white rounded-xl sm:rounded-2xl shadow-xl overflow-hidden'>
+            <header className='px-4 sm:px-6 lg:px-8 py-6 sm:py-8 bg-gradient-to-r from-blue-50 to-cyan-50'>
+              <h1 className='text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 mb-4 leading-tight'>
                 Paano Manalo sa Auctions Nang Hindi Nag-overbid 🏆
               </h1>
-              <div className='flex flex-wrap items-center gap-4 text-gray-600 text-sm'>
+              <div className='flex flex-wrap items-center gap-2 sm:gap-4 text-gray-600 text-xs sm:text-sm'>
                 <span className='flex items-center gap-1'>
                   <span>📅</span> Marso 20, 2025
                 </span>
@@ -40,8 +40,8 @@ const WinAuctionsGuide = () => {
               </div>
             </header>
 
-            <div className='p-8'>
-              <div className='relative w-full h-64 mb-8 rounded-xl overflow-hidden'>
+            <div className='p-4 sm:p-6 lg:p-8'>
+              <div className='relative w-full h-48 sm:h-56 lg:h-64 mb-6 sm:mb-8 rounded-lg sm:rounded-xl overflow-hidden'>
                 <Image
                   src='/images/blog/auction-strategy-filipino.png'
                   alt='Filipino auction bidding strategy'
@@ -51,8 +51,8 @@ const WinAuctionsGuide = () => {
                 />
               </div>
 
-              <div className='prose prose-lg max-w-none'>
-                <p className='text-lg text-gray-700 leading-relaxed mb-8'>
+              <div className='prose prose-base sm:prose-lg max-w-none'>
+                <p className='text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8'>
                   Sa mundo ng online auctions sa TindaMo, hindi laging ang
                   pinakamataas na bid ang nananalo. Kailangan ng strategy,
                   timing, at diskarte para makakuha ng best deals sa inyong

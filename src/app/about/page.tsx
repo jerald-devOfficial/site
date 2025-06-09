@@ -196,7 +196,7 @@ const AboutUs = () => {
             </div>
             <div className='bg-purple-50 p-4 rounded-lg'>
               <h4 className='font-semibold text-purple-800 mb-2'>
-                $2M+ in Local Value
+                ₱82M+ in Local Value
               </h4>
               <p className='text-purple-700 text-sm'>
                 Economic value kept within local communities
@@ -220,7 +220,9 @@ const AboutUs = () => {
               needed, but I met a wonderful neighbor who&apos;s become a
               friend.&quot;
             </p>
-            <p className='text-gray-600 text-xs'>- Sarah M., Austin, TX</p>
+            <p className='text-gray-600 text-xs'>
+              - Ana Marie Santos, Taguig City
+            </p>
           </div>
         </div>
       )
