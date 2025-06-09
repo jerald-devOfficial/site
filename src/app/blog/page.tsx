@@ -1,3 +1,5 @@
+'use client'
+
 import ContactInfo from '@/components/contact-info'
 import Footer from '@/components/footer'
 import Header from '@/components/header'

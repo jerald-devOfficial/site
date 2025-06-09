@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import NewsletterSignup from './newsletter-signup'
 
 const Footer = () => (
   <footer className='w-full bg-white border-t border-[#F5A623]/20 pt-8 pb-4 mt-8'>
@@ -28,19 +29,9 @@ const Footer = () => (
         </Link>
       </nav>
       {/* Newsletter signup */}
-      <form className='flex gap-2'>
-        <input
-          type='email'
-          placeholder='Get local deals & bidding alerts!'
-          className='px-4 py-2 rounded-full border border-[#F5A623] text-sm'
-        />
-        <button
-          type='submit'
-          className='px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold'
-        >
-          Sign Up
-        </button>
-      </form>
+      <div className='relative'>
+        <NewsletterSignup />
+      </div>
       {/* Social proof and icons */}
       <div className='flex flex-col items-center gap-2'>
         <span className='text-xs text-[#555]'>10,000+ safe trades</span>
