@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const Footer = () => (
   <footer className='w-full bg-white border-t border-[#F5A623]/20 pt-8 pb-4 mt-8'>
@@ -6,12 +6,14 @@ const Footer = () => (
     <div className='fixed bottom-0 left-0 w-full bg-[#FFF7E6] text-black flex items-center justify-center gap-4 py-3 z-40 md:hidden shadow-lg'>
       <Link
         href='#'
-        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#0ea5e9] text-white font-bold'>
+        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#0ea5e9] text-white font-bold'
+      >
         App Store
       </Link>
       <Link
         href='#'
-        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#27ae60] text-white font-bold'>
+        className='flex items-center gap-2 px-4 py-2 rounded-full bg-[#27ae60] text-white font-bold'
+      >
         Google Play
       </Link>
     </div>
@@ -43,7 +45,8 @@ const Footer = () => (
         />
         <button
           type='submit'
-          className='px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold'>
+          className='px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold'
+        >
           Sign Up
         </button>
       </form>
@@ -54,19 +57,22 @@ const Footer = () => (
           <Link
             href='#'
             aria-label='Twitter'
-            className='text-[#0ea5e9] text-xl'>
+            className='text-[#0ea5e9] text-xl'
+          >
             🐦
           </Link>
           <Link
             href='#'
             aria-label='Facebook'
-            className='text-[#0ea5e9] text-xl'>
+            className='text-[#0ea5e9] text-xl'
+          >
             📘
           </Link>
           <Link
             href='#'
             aria-label='Instagram'
-            className='text-[#0ea5e9] text-xl'>
+            className='text-[#0ea5e9] text-xl'
+          >
             📸
           </Link>
         </div>
@@ -82,11 +88,11 @@ const Footer = () => (
         Privacy Policy
       </Link>{' '}
       ·{' '}
-      <Link href='#community' className='hover:underline'>
+      <Link href='/community-guidelines' className='hover:underline'>
         Community Guidelines
       </Link>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
