@@ -19,7 +19,7 @@ const AboutUs = () => {
             difficult in our increasingly digital world.
           </p>
           <p className='mb-4'>
-            Founded in 2024, TindaMo bridges this gap by creating a hyper-local
+            Founded in 2025, TindaMo bridges this gap by creating a hyper-local
             marketplace that brings communities together through trade, barter,
             and meaningful exchanges. We believe that the best deals aren&apos;t
             just about price – they&apos;re about building connections with the
