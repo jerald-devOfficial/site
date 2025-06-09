@@ -1,56 +1,112 @@
-import { Baloo_2 } from 'next/font/google';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Baloo_2 } from 'next/font/google'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const baloo2 = Baloo_2({
   subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-baloo2',
-});
+  weight: ['600', '700'],
+  variable: '--font-baloo2'
+})
 
 const Header = () => (
-  <header className='w-full flex items-center justify-between px-4 py-3 bg-white shadow-sm sticky top-0 z-30'>
-    <div className='flex items-end gap-px'>
-      <div className='block drop-shadow-2xl drop-shadow-black/25'>
-        <Image
-          src='/logo.png'
-          alt='TindaMo Logo'
-          width={40}
-          height={40}
-          sizes='100vw'
-          priority
-        />
-      </div>
-      <span
-        className={`text-black font-bold leading-normal text-[28px] tracking-tight tindamo-shadow ${baloo2.className}`}>
-        TindaMo
-      </span>
-    </div>
-    <nav className='hidden md:flex gap-6 text-base font-medium'>
-      <Link href='/#features' className='hover:text-[#0ea5e9]'>
-        Features
-      </Link>
-      <Link href='/#listings' className='hover:text-[#0ea5e9]'>
-        Listings
-      </Link>
-      <Link href='/#blog' className='hover:text-[#0ea5e9]'>
-        Blog
-      </Link>
-      <Link href='/#safety' className='hover:text-[#0ea5e9]'>
-        Safety
-      </Link>
-      <Link href='/#contact' className='hover:text-[#0ea5e9]'>
-        Contact
-      </Link>
-    </nav>
-    <Link
-      href='https://calendly.com/team-tindamo/30min'
-      rel='noopener noreferrer'
-      target='_blank'
-      className='ml-4 px-5 py-2 rounded-full font-bold text-white bg-[#27ae60] hover:bg-[#219150] transition-colors'>
-      Schedule A Call
-    </Link>
-  </header>
-);
+  <header className='w-full bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/95'>
+    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='flex items-center justify-between h-16'>
+        {/* Logo Section */}
+        <Link href='/' className='flex items-center space-x-3 group'>
+          <div className='relative'>
+            {/* Logo Background Circle */}
+            <div className='absolute inset-0 bg-gradient-to-br from-blue-500 to-green-500 rounded-full blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300'></div>
 
-export default Header;
+            {/* Logo Container */}
+            <div className='relative bg-gradient-to-br from-blue-500 to-green-500 p-2 rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105'>
+              <Image
+                src='/logo.png'
+                alt='TindaMo Logo'
+                width={32}
+                height={32}
+                className='relative z-10 drop-shadow-sm'
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Brand Text */}
+          <div className='flex flex-col'>
+            <span
+              className={`text-gray-900 font-bold text-xl tracking-tight group-hover:text-blue-600 transition-colors duration-300 ${baloo2.className}`}
+            >
+              TindaMo
+            </span>
+            <span className='text-xs text-gray-500 font-medium tracking-wide -mt-1'>
+              Local Trading
+            </span>
+          </div>
+        </Link>
+
+        {/* Navigation */}
+        <nav className='hidden md:flex items-center space-x-8'>
+          <Link
+            href='/about'
+            className='text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group'
+          >
+            About
+            <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200'></span>
+          </Link>
+          <Link
+            href='/blog'
+            className='text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group'
+          >
+            Blog
+            <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200'></span>
+          </Link>
+          <Link
+            href='/safety-tips'
+            className='text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group'
+          >
+            Safety
+            <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200'></span>
+          </Link>
+          <Link
+            href='/support'
+            className='text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group'
+          >
+            Support
+            <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200'></span>
+          </Link>
+        </nav>
+
+        {/* CTA Button */}
+        <div className='flex items-center space-x-4'>
+          {/* Mobile Menu Button - You can add this later if needed */}
+          <button className='md:hidden p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors duration-200'>
+            <svg
+              className='w-6 h-6'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M4 6h16M4 12h16M4 18h16'
+              />
+            </svg>
+          </button>
+
+          <Link
+            href='https://calendly.com/team-tindamo/30min'
+            rel='noopener noreferrer'
+            target='_blank'
+            className='bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+          >
+            Get Started
+          </Link>
+        </div>
+      </div>
+    </div>
+  </header>
+)
+
+export default Header

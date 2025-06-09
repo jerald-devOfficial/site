@@ -128,9 +128,11 @@ const CommunityGuidelines = () => {
             3.4 Privacy Respect
           </h4>
           <ul className='list-disc list-inside text-gray-600 space-y-1'>
-            <li>Respect others' personal information and privacy</li>
-            <li>Don't share private conversations without permission</li>
-            <li>Use the platform's messaging system for initial contact</li>
+            <li>Respect others&apos; personal information and privacy</li>
+            <li>Don&apos;t share private conversations without permission</li>
+            <li>
+              Use the platform&apos;s messaging system for initial contact
+            </li>
           </ul>
         </div>
       )
@@ -204,41 +206,41 @@ const CommunityGuidelines = () => {
             5.1 Appropriate Content
           </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Content must be relevant to the platform's purpose</li>
+            <li>Keep all content family-friendly and appropriate</li>
             <li>
-              Images should be clear, well-lit, and accurately represent items
+              Use clear, high-quality photos that accurately represent items
             </li>
-            <li>Descriptions should be honest and detailed</li>
-            <li>Language should be appropriate for all ages</li>
+            <li>Write honest and detailed descriptions</li>
+            <li>
+              Include relevant information about condition, size, and features
+            </li>
           </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             5.2 Prohibited Content
           </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Explicit, sexual, or adult content</li>
-            <li>Violent, graphic, or disturbing imagery</li>
-            <li>Hate speech, discriminatory language, or offensive symbols</li>
-            <li>False, misleading, or deceptive information</li>
-            <li>Copyrighted material used without permission</li>
+            <li>Adult content, nudity, or sexually explicit material</li>
+            <li>Violent, disturbing, or graphic content</li>
+            <li>Hate speech, discriminatory language, or offensive material</li>
+            <li>Content that promotes illegal activities</li>
+            <li>Spam, advertisements, or irrelevant promotional content</li>
           </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             5.3 Item Listings
           </h4>
-          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Only list items you own and have the right to sell</li>
-            <li>Provide accurate condition assessments</li>
-            <li>Include all relevant details and potential issues</li>
-            <li>Update listings promptly when items are sold</li>
-          </ul>
-
-          <div className='bg-yellow-50 border-l-4 border-yellow-400 p-4'>
-            <p className='text-sm text-yellow-800'>
-              <strong>Content Review:</strong> We reserve the right to review,
-              edit, or remove any content that violates these standards or our
-              Terms of Service.
+          <div className='bg-blue-50 border-l-4 border-blue-400 p-4'>
+            <p className='text-sm text-blue-800 mb-2'>
+              <strong>Best Practices for Listings:</strong>
             </p>
+            <ul className='list-disc list-inside text-blue-700 text-sm space-y-1'>
+              <li>Use multiple photos showing different angles</li>
+              <li>Clearly state the condition (new, used, refurbished)</li>
+              <li>Include dimensions, brand, model, or other specifications</li>
+              <li>Set fair and reasonable prices</li>
+              <li>Update availability promptly when items are sold</li>
+            </ul>
           </div>
         </div>
       )
@@ -250,56 +252,49 @@ const CommunityGuidelines = () => {
       content: (
         <div>
           <p className='mb-4'>
-            Your safety is our top priority. Follow these guidelines to protect
-            yourself and others:
+            Your safety is our top priority. Follow these guidelines to ensure
+            safe and secure transactions:
           </p>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
-            6.1 Meeting in Person
+            6.1 Meeting Safety
           </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Meet in well-lit, public places</li>
-            <li>Bring a friend or let someone know your plans</li>
-            <li>Trust your instincts - if something feels wrong, leave</li>
+            <li>Meet in public, well-lit areas with good foot traffic</li>
+            <li>Consider meeting at police station safe exchange zones</li>
             <li>
-              Avoid sharing personal information until you feel comfortable
+              Bring a friend when possible, especially for high-value items
             </li>
+            <li>Trust your instincts - if something feels wrong, leave</li>
+            <li>Don&apos;t invite strangers to your home or go to theirs</li>
           </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             6.2 Online Safety
           </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Keep initial conversations on the platform</li>
-            <li>Be cautious about sharing personal contact information</li>
-            <li>Don't click suspicious links or download unknown files</li>
-            <li>Report any suspicious or inappropriate behavior</li>
+            <li>Keep personal information private until you meet in person</li>
+            <li>
+              Use TindaMo&apos;s messaging system for initial communications
+            </li>
+            <li>Don&apos;t click suspicious links or download unknown files</li>
+            <li>Be cautious of deals that seem too good to be true</li>
           </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             6.3 Transaction Safety
           </h4>
-          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
+          <ul className='list-disc list-inside text-gray-600 space-y-1'>
+            <li>Inspect items thoroughly before making payment</li>
             <li>Use secure payment methods when possible</li>
-            <li>Be wary of deals that seem too good to be true</li>
-            <li>
-              Verify item authenticity before completing expensive purchases
-            </li>
-            <li>Document transactions for your records</li>
+            <li>Keep records of your transactions</li>
+            <li>Report any suspicious or fraudulent activity immediately</li>
           </ul>
-
-          <div className='bg-red-50 border-l-4 border-red-400 p-4'>
-            <p className='text-sm text-red-800'>
-              <strong>Emergency:</strong> If you ever feel unsafe or encounter
-              illegal activity, contact local authorities immediately. Then
-              report the incident to us.
-            </p>
-          </div>
         </div>
       )
     },
     {
-      id: 'reporting-violations',
+      id: 'reporting',
       title: '7. Reporting Violations',
       icon: <AlertTriangle className='w-5 h-5' />,
       content: (
@@ -313,10 +308,13 @@ const CommunityGuidelines = () => {
             7.1 How to Report
           </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Use the report button on profiles, listings, or messages</li>
-            <li>Contact our support team directly for serious violations</li>
-            <li>Provide detailed information about the incident</li>
-            <li>Include screenshots or evidence when possible</li>
+            <li>
+              Use the &quot;Report&quot; button on profiles, listings, or
+              messages
+            </li>
+            <li>Contact our support team through the help center</li>
+            <li>Provide detailed information about the violation</li>
+            <li>Include screenshots or evidence when relevant</li>
           </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
@@ -324,25 +322,22 @@ const CommunityGuidelines = () => {
           </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
             <li>Harassment, threats, or abusive behavior</li>
-            <li>Fraudulent or misleading listings</li>
-            <li>Inappropriate or offensive content</li>
-            <li>Suspected illegal activity</li>
-            <li>Privacy violations or doxxing</li>
+            <li>Fraudulent listings or suspicious activity</li>
+            <li>Inappropriate content or spam</li>
+            <li>Safety concerns or dangerous situations</li>
+            <li>Violations of these community guidelines</li>
           </ul>
 
-          <h4 className='font-semibold text-gray-800 mb-3'>7.3 Our Response</h4>
+          <h4 className='font-semibold text-gray-800 mb-3'>
+            7.3 Our Response Process
+          </h4>
           <p className='mb-4'>We take all reports seriously and will:</p>
-          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Review reports promptly and thoroughly</li>
-            <li>Take appropriate action based on our investigation</li>
-            <li>Protect the privacy of all parties involved</li>
+          <ul className='list-disc list-inside text-gray-600 space-y-1'>
+            <li>Review reports within 24-48 hours</li>
+            <li>Investigate the situation thoroughly</li>
+            <li>Take appropriate action based on our findings</li>
             <li>Follow up with reporters when necessary</li>
           </ul>
-
-          <p className='text-sm font-medium'>
-            False or malicious reports may result in consequences for the
-            reporting user.
-          </p>
         </div>
       )
     },
@@ -353,52 +348,55 @@ const CommunityGuidelines = () => {
       content: (
         <div>
           <p className='mb-4'>
-            Violations of these Community Guidelines may result in various
-            consequences, depending on the severity and frequency of the
-            violation:
+            Violations of these guidelines may result in the following actions:
           </p>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             8.1 Warning System
           </h4>
           <p className='mb-4'>
-            For minor or first-time violations, users may receive warnings with
-            guidance on how to improve their behavior.
+            First-time or minor violations typically result in a warning and
+            guidance on how to comply with our guidelines.
           </p>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
-            8.2 Temporary Restrictions
-          </h4>
-          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Temporary suspension of messaging privileges</li>
-            <li>Restriction from creating new listings</li>
-            <li>Limited access to certain platform features</li>
-          </ul>
-
-          <h4 className='font-semibold text-gray-800 mb-3'>
-            8.3 Account Suspension
+            8.2 Content Removal
           </h4>
           <p className='mb-4'>
-            Repeated violations or serious misconduct may result in temporary
-            account suspension, ranging from days to weeks.
+            Content that violates our guidelines will be removed, and users will
+            be notified of the reason for removal.
           </p>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
-            8.4 Permanent Ban
+            8.3 Account Restrictions
           </h4>
           <p className='mb-4'>
-            The most serious violations, including illegal activities,
-            harassment, or repeated offenses, may result in permanent account
-            termination.
+            Serious or repeated violations may result in temporary restrictions
+            on account features such as messaging, posting, or bidding.
           </p>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
-            8.5 Appeals Process
+            8.4 Account Suspension
+          </h4>
+          <p className='mb-4'>
+            Severe violations or repeated offenses may result in temporary
+            account suspension.
+          </p>
+
+          <h4 className='font-semibold text-gray-800 mb-3'>
+            8.5 Account Termination
+          </h4>
+          <p className='mb-4'>
+            The most serious violations, including illegal activities, threats,
+            or persistent abuse, may result in permanent account termination.
+          </p>
+
+          <h4 className='font-semibold text-gray-800 mb-3'>
+            8.6 Appeals Process
           </h4>
           <p>
-            Users may appeal enforcement actions by contacting our support team
-            within 30 days of the action. We will review appeals fairly and may
-            reverse decisions if warranted.
+            If you believe an enforcement action was taken in error, you can
+            appeal through our support center within 30 days of the action.
           </p>
         </div>
       )
@@ -410,79 +408,76 @@ const CommunityGuidelines = () => {
       content: (
         <div>
           <p className='mb-4'>
-            We're committed to supporting our community members and providing
-            resources for a positive experience:
+            We&apos;re here to support you and help you succeed in our
+            community:
           </p>
 
           <h4 className='font-semibold text-gray-800 mb-3'>9.1 Help Center</h4>
-          <p className='mb-4'>
-            Access our comprehensive Help Center for guides on using the
-            platform safely and effectively.
-          </p>
+          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
+            <li>Comprehensive guides on using TindaMo effectively</li>
+            <li>Frequently asked questions and answers</li>
+            <li>Video tutorials and step-by-step instructions</li>
+            <li>Best practices for safe trading</li>
+          </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             9.2 Community Forums
           </h4>
-          <p className='mb-4'>
-            Connect with other users, share tips, and get advice in our
-            community forums (coming soon).
-          </p>
+          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
+            <li>Connect with other community members</li>
+            <li>Share tips and success stories</li>
+            <li>Ask questions and get advice</li>
+            <li>Stay updated on platform changes and features</li>
+          </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
             9.3 Safety Resources
           </h4>
-          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Safety tips and best practices guides</li>
-            <li>How-to videos for secure transactions</li>
-            <li>Information about common scams and how to avoid them</li>
+          <ul className='list-disc list-inside text-gray-600 space-y-1'>
+            <li>Local police safe exchange zones directory</li>
+            <li>Safety checklists for different types of transactions</li>
+            <li>Emergency contact information and reporting procedures</li>
+            <li>Educational content on recognizing and avoiding scams</li>
           </ul>
-
-          <h4 className='font-semibold text-gray-800 mb-3'>9.4 Support Team</h4>
-          <p>
-            Our dedicated support team is available to help with questions,
-            concerns, or issues. Don't hesitate to reach out when you need
-            assistance.
-          </p>
         </div>
       )
     },
     {
-      id: 'updates-changes',
+      id: 'updates',
       title: '10. Updates and Changes',
       icon: <MessageSquare className='w-5 h-5' />,
       content: (
         <div>
-          <h4 className='font-semibold text-gray-800 mb-3'>
-            10.1 Guideline Updates
-          </h4>
           <p className='mb-4'>
-            We may update these Community Guidelines from time to time to
-            reflect changes in our community, new features, or legal
-            requirements. We will notify users of significant changes through:
+            These Community Guidelines may be updated from time to time to
+            reflect changes in our platform, legal requirements, or community
+            needs.
           </p>
+
+          <h4 className='font-semibold text-gray-800 mb-3'>
+            10.1 Notification Process
+          </h4>
           <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
-            <li>Email notifications to all users</li>
-            <li>In-app announcements</li>
-            <li>Updates on our website and social media</li>
+            <li>We&apos;ll notify users of significant changes via email</li>
+            <li>Updates will be posted on our website and in the app</li>
+            <li>Changes take effect 30 days after notification</li>
+            <li>Continued use of the platform constitutes acceptance</li>
           </ul>
 
           <h4 className='font-semibold text-gray-800 mb-3'>
-            10.2 Community Input
+            10.2 Feedback Welcome
           </h4>
           <p className='mb-4'>
-            We value feedback from our community and may consider suggestions
-            for improving these guidelines. Feel free to share your thoughts
-            with our support team.
+            We value your input on these guidelines. If you have suggestions for
+            improvements or questions about specific policies, please contact
+            our community team.
           </p>
 
-          <h4 className='font-semibold text-gray-800 mb-3'>
-            10.3 Effective Date
-          </h4>
-          <p>
-            These guidelines become effective immediately upon posting. By
-            continuing to use TindaMo after updates, you agree to follow the
-            revised guidelines.
-          </p>
+          <div className='bg-yellow-50 border-l-4 border-yellow-400 p-4'>
+            <p className='text-sm text-yellow-800'>
+              <strong>Last Updated:</strong> January 2024
+            </p>
+          </div>
         </div>
       )
     }
@@ -509,7 +504,7 @@ const CommunityGuidelines = () => {
               Community Guidelines
             </h2>
             <p className='text-gray-600'>
-              Building a safe, respectful, and inclusive community together
+              Building a safe, respectful, and inclusive community for everyone
             </p>
           </div>
         </div>
@@ -517,18 +512,17 @@ const CommunityGuidelines = () => {
         <div className='max-w-4xl mx-auto p-6'>
           <div className='bg-white rounded-lg shadow-lg overflow-hidden'>
             <div className='p-8'>
-              <div className='mb-8 p-6 bg-blue-50 border border-blue-200 rounded-lg'>
+              <div className='mb-8 p-6 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg'>
                 <div className='flex items-start space-x-3'>
-                  <Heart className='w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0' />
+                  <Shield className='w-6 h-6 text-green-600 mt-0.5 flex-shrink-0' />
                   <div>
-                    <h3 className='text-lg font-semibold text-blue-800 mb-2'>
-                      Welcome to Our Community
+                    <h3 className='text-lg font-semibold text-green-800 mb-2'>
+                      Community First, Always
                     </h3>
-                    <p className='text-blue-700 text-sm leading-relaxed'>
-                      These guidelines help us maintain a positive, safe, and
-                      welcoming environment for everyone. By following them,
-                      you're contributing to a community built on trust,
-                      respect, and mutual support.
+                    <p className='text-green-700 text-sm leading-relaxed'>
+                      These guidelines help us maintain a welcoming, safe, and
+                      positive environment where everyone can trade, connect,
+                      and build meaningful relationships with their neighbors.
                     </p>
                   </div>
                 </div>
@@ -536,7 +530,7 @@ const CommunityGuidelines = () => {
 
               <div className='mb-8 p-6 bg-gray-50 rounded-lg'>
                 <h3 className='text-lg font-semibold text-gray-800 mb-4'>
-                  Table of Contents
+                  Quick Navigation
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                   {sections.map((section) => (
@@ -577,8 +571,8 @@ const CommunityGuidelines = () => {
           </div>
 
           <ContactInfo
-            title='Questions About Community Guidelines?'
-            subtitle='If you have questions about these guidelines or need to report a violation, please contact us:'
+            title='Questions About Our Guidelines?'
+            subtitle="Need clarification on our community standards or want to report a concern? We're here to help:"
           />
         </div>
       </div>
