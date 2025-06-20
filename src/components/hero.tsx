@@ -34,7 +34,7 @@ const Hero = () => (
       </svg>
     </div>
 
-    <div className='relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+    <div className='relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 pb-20 sm:pt-12 sm:pb-24'>
       {/* Hero image with Filipino marketplace vibe */}
       <div className='mb-6 sm:mb-8 relative'>
         <div className='w-full max-w-3xl mx-auto h-48 sm:h-64 lg:h-72 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/20 backdrop-blur-sm'>
@@ -125,7 +125,7 @@ const Hero = () => (
       </div>
 
       {/* Trust indicators with Filipino touch */}
-      <div className='flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm text-blue-100 px-4'>
+      <div className='flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm text-blue-200 px-4'>
         <div className='flex items-center gap-1 sm:gap-2'>
           <span className='text-green-400'>✅</span>
           <span className='whitespace-nowrap'>10,000+ Ligtas na Palitan</span>
