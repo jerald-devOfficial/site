@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Safety = () => (
   <section
     className='w-full max-w-6xl mx-auto flex flex-col gap-8 py-16 px-4'
@@ -296,12 +298,12 @@ const Safety = () => (
         >
           🚨 Call 911 (Emergency)
         </a>
-        <a
+        <Link
           href='/support'
           className='bg-red-100 text-red-800 px-6 py-3 rounded-lg font-bold hover:bg-red-200 transition-colors border border-red-300'
         >
           📞 Contact TindaMo Support
-        </a>
+        </Link>
       </div>
     </div>
 

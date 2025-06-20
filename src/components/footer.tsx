@@ -1,5 +1,5 @@
+import WaitlistSignup from '@/components/waitlist-signup'
 import Link from 'next/link'
-import NewsletterSignup from './newsletter-signup'
 
 const Footer = () => (
   <footer className='w-full bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden'>
@@ -146,23 +146,21 @@ const Footer = () => (
             </div>
           </div>
 
-          {/* Newsletter */}
+          {/* Waitlist Signup */}
           <div>
             <h3 className='text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-yellow-300'>
-              Stay Updated
+              🚀 Join the Waitlist
             </h3>
             <p className='text-blue-200 text-sm mb-4'>
-              Get deals, tips, at mga bagong features straight sa inyong inbox!
+              Be among the first to experience TindaMo in your area!
             </p>
-            <NewsletterSignup />
+            <WaitlistSignup variant='compact' className='text-white' />
 
             {/* Trust indicators */}
             <div className='mt-6 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20'>
               <div className='text-center'>
-                <div className='text-2xl font-bold text-yellow-300'>
-                  10,000+
-                </div>
-                <div className='text-xs text-blue-200'>Safe Trades</div>
+                <div className='text-2xl font-bold text-yellow-300'>2,500+</div>
+                <div className='text-xs text-blue-200'>Waitlist Members</div>
               </div>
               <div className='flex justify-center gap-2 mt-2'>
                 <span className='text-green-400'>⭐</span>
@@ -172,7 +170,7 @@ const Footer = () => (
                 <span className='text-green-400'>⭐</span>
               </div>
               <div className='text-xs text-center text-blue-200 mt-1'>
-                Trusted by Pinoys
+                Early Access Coming
               </div>
             </div>
           </div>
@@ -205,15 +203,10 @@ const Footer = () => (
               </Link>
             </div>
 
-            {/* Copyright and location */}
-            <div className='text-center text-xs sm:text-sm text-blue-200'>
-              <p>
-                &copy; {new Date().getFullYear()} TindaMo. Made with ❤️ in the
-                Philippines.
-              </p>
-              <p className='text-xs mt-1'>
-                Serving Filipino communities nationwide 🇵🇭
-              </p>
+            {/* Copyright */}
+            <div className='text-center md:text-right text-xs sm:text-sm text-blue-200'>
+              <p>© 2024 TindaMo. All rights reserved.</p>
+              <p className='mt-1'>Made with ❤️ for the Filipino community</p>
             </div>
           </div>
         </div>

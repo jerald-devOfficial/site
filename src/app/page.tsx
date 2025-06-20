@@ -7,6 +7,7 @@ import Listings from '@/components/listings'
 import Onboarding from '@/components/onboarding'
 import Safety from '@/components/safety'
 import TrustSafety from '@/components/trust-safety'
+import WaitlistSection from '@/components/waitlist-section'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main className='flex-1 flex flex-col gap-12'>
         <Hero />
+        <WaitlistSection />
         <Onboarding />
         <TrustSafety />
         <Features />

@@ -92,6 +92,13 @@ const Header = () => {
               Support
               <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200'></span>
             </Link>
+            <Link
+              href='/waitlist'
+              className='text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group'
+            >
+              Join Waitlist
+              <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200'></span>
+            </Link>
           </nav>
 
           {/* Right side items */}
@@ -178,6 +185,13 @@ const Header = () => {
               onClick={closeMenu}
             >
               Support
+            </Link>
+            <Link
+              href='/waitlist'
+              className='block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-colors duration-200'
+              onClick={closeMenu}
+            >
+              Join Waitlist
             </Link>
           </nav>
         </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Hero = () => (
   <section className='relative w-full min-h-[80vh] sm:min-h-[85vh] flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 text-white overflow-hidden'>
@@ -104,20 +105,20 @@ const Hero = () => (
 
       {/* CTA Buttons */}
       <div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4'>
-        <a
-          href='#join'
+        <Link
+          href='/waitlist'
           className='group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-black bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-base sm:text-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-yellow-400/25 text-center'
         >
           <span className='flex items-center justify-center gap-2'>
             <span className='hidden sm:inline'>
-              🚀 Sumali Na – I-list ang Unang Item mo sa 60 Seconds!
+              🚀 Join the Waitlist – Be Among the First!
             </span>
-            <span className='sm:hidden'>🚀 Sumali Na Ngayon!</span>
+            <span className='sm:hidden'>🚀 Join Waitlist</span>
             <span className='group-hover:translate-x-1 transition-transform'>
               →
             </span>
           </span>
-        </a>
+        </Link>
         <button className='w-full sm:w-auto px-4 sm:px-6 py-3 rounded-full font-semibold text-white border-2 border-white/30 hover:bg-white/10 transition-colors backdrop-blur-sm text-sm sm:text-base'>
           📱 Paano Gumagana?
         </button>
