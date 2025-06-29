@@ -14,8 +14,9 @@ import { z } from 'zod'
 
 const waitlistSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
-  name: z.string().min(1, 'Please enter your name'),
-  location: z.string().min(1, 'Please enter your location'),
+  firstName: z.string().min(1, 'Please enter your first name'),
+  lastName: z.string().min(1, 'Please enter your last name'),
+  location: z.string().min(1, 'Please enter your city/municipality'),
   interests: z.array(z.string()).optional()
 })
 
@@ -31,7 +32,8 @@ export async function joinWaitlist(
   try {
     const validatedData = waitlistSchema.parse({
       email: formData.get('email'),
-      name: formData.get('name'),
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
       location: formData.get('location'),
       interests: formData.getAll('interests')
     })
@@ -63,10 +65,10 @@ export async function joinWaitlist(
               status: 'subscribed',
               tags: ['waitlist', 'early-access', 'local-marketplace'],
               merge_fields: {
-                FNAME: validatedData.name,
-                LOCATION: validatedData.location,
-                INTERESTS: validatedData.interests?.join(', ') || '',
-                SOURCE: 'Website Waitlist'
+                FNAME: validatedData.firstName,
+                LNAME: validatedData.lastName,
+                ADDRESS: validatedData.location,
+                MMERGE7: validatedData.interests?.join(', ') || ''
               }
             })
           }
@@ -141,7 +143,8 @@ export async function joinWaitlist(
 async function sendNotificationToTeam(
   data: {
     email: string
-    name: string
+    firstName: string
+    lastName: string
     location: string
     interests?: string[]
   },
@@ -150,4 +153,33 @@ async function sendNotificationToTeam(
   // Logs the signup and could send notification to team@tindamo.store
   console.log(`📧 New waitlist signup: ${data.email} (#${waitlistNumber})`)
   console.log(`💌 Notify: team@tindamo.store`)
+
+  // TODO: Set up email notification to team@tindamo.store
+  // Example with SendGrid:
+  /*
+  const sgMail = require('@sendgrid/mail')
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  
+  const msg = {
+    to: 'team@tindamo.store',
+    from: 'noreply@tindamo.store',
+    subject: `🎉 New Waitlist Signup #${waitlistNumber} - TindaMo`,
+    text: `New user joined waitlist: ${data.email} from ${data.location}`,
+    html: `
+      <div style="font-family: Arial, sans-serif;">
+        <h2>🎉 New Waitlist Signup!</h2>
+        <p><strong>Waitlist #:</strong> ${waitlistNumber}</p>
+        <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Location:</strong> ${data.location}</p>
+        <p><strong>Interests:</strong> ${data.interests?.join(', ') || 'None specified'}</p>
+        <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
+        <hr>
+        <p>Go to your email marketing dashboard to engage with this new waitlist member!</p>
+      </div>
+    `,
+  }
+  
+  await sgMail.send(msg)
+  */
 }

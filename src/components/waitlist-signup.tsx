@@ -30,19 +30,45 @@ const WaitlistSignup = ({
   if (variant === 'compact') {
     return (
       <div className={`relative ${className}`}>
-        <form action={handleSubmit} className='flex gap-2'>
+        <form action={handleSubmit} className='space-y-2'>
+          <div className='flex gap-2'>
+            <input
+              type='text'
+              name='firstName'
+              placeholder='First name'
+              className='px-3 py-2 rounded-full border border-[#F5A623] text-xs min-w-0 flex-1'
+              required
+              disabled={isPending}
+            />
+            <input
+              type='text'
+              name='lastName'
+              placeholder='Last name'
+              className='px-3 py-2 rounded-full border border-[#F5A623] text-xs min-w-0 flex-1'
+              required
+              disabled={isPending}
+            />
+          </div>
           <input
             type='email'
             name='email'
-            placeholder='Enter your email for early access'
-            className='px-4 py-2 rounded-full border border-[#F5A623] text-sm min-w-0 flex-1'
+            placeholder='Your email address'
+            className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs'
+            required
+            disabled={isPending}
+          />
+          <input
+            type='text'
+            name='location'
+            placeholder='City/Municipality'
+            className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs'
             required
             disabled={isPending}
           />
           <button
             type='submit'
             disabled={isPending}
-            className='px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap text-sm'
+            className='w-full px-4 py-2 rounded-full bg-[#F5A623] text-white font-bold disabled:opacity-50 disabled:cursor-not-allowed text-xs'
           >
             {isPending ? 'Joining...' : 'Join Waitlist'}
           </button>
@@ -69,16 +95,16 @@ const WaitlistSignup = ({
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
           <input
             type='text'
-            name='name'
-            placeholder='Your name'
+            name='firstName'
+            placeholder='First name *'
             className='px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
             required
             disabled={isPending}
           />
           <input
-            type='email'
-            name='email'
-            placeholder='Your email'
+            type='text'
+            name='lastName'
+            placeholder='Last name *'
             className='px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
             required
             disabled={isPending}
@@ -86,9 +112,18 @@ const WaitlistSignup = ({
         </div>
 
         <input
+          type='email'
+          name='email'
+          placeholder='Your email address *'
+          className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
+          required
+          disabled={isPending}
+        />
+
+        <input
           type='text'
           name='location'
-          placeholder='Your city/area (e.g., Quezon City, Makati)'
+          placeholder='Your city/municipality * (e.g., Quezon City, Makati, Cebu City)'
           className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
           required
           disabled={isPending}
