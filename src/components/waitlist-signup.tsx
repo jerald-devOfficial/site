@@ -32,39 +32,59 @@ const WaitlistSignup = ({
       <div className={`relative ${className}`}>
         <form action={handleSubmit} className='space-y-2'>
           <div className='flex gap-2'>
+            <div className='flex-1'>
+              <label className='block text-xs font-medium text-blue-200 mb-1'>
+                First Name
+              </label>
+              <input
+                type='text'
+                name='firstName'
+                placeholder='First name'
+                className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs text-gray-900 placeholder-gray-500'
+                required
+                disabled={isPending}
+              />
+            </div>
+            <div className='flex-1'>
+              <label className='block text-xs font-medium text-blue-200 mb-1'>
+                Last Name
+              </label>
+              <input
+                type='text'
+                name='lastName'
+                placeholder='Last name'
+                className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs text-gray-900 placeholder-gray-500'
+                required
+                disabled={isPending}
+              />
+            </div>
+          </div>
+          <div>
+            <label className='block text-xs font-medium text-blue-200 mb-1'>
+              Email Address
+            </label>
             <input
-              type='text'
-              name='firstName'
-              placeholder='First name'
-              className='px-3 py-2 rounded-full border border-[#F5A623] text-xs min-w-0 flex-1'
-              required
-              disabled={isPending}
-            />
-            <input
-              type='text'
-              name='lastName'
-              placeholder='Last name'
-              className='px-3 py-2 rounded-full border border-[#F5A623] text-xs min-w-0 flex-1'
+              type='email'
+              name='email'
+              placeholder='Your email address'
+              className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs text-gray-900 placeholder-gray-500'
               required
               disabled={isPending}
             />
           </div>
-          <input
-            type='email'
-            name='email'
-            placeholder='Your email address'
-            className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs'
-            required
-            disabled={isPending}
-          />
-          <input
-            type='text'
-            name='location'
-            placeholder='City/Municipality'
-            className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs'
-            required
-            disabled={isPending}
-          />
+          <div>
+            <label className='block text-xs font-medium text-blue-200 mb-1'>
+              City/Municipality
+            </label>
+            <input
+              type='text'
+              name='location'
+              placeholder='e.g., Quezon City, Makati'
+              className='w-full px-3 py-2 rounded-full border border-[#F5A623] text-xs text-gray-900 placeholder-gray-500'
+              required
+              disabled={isPending}
+            />
+          </div>
           <button
             type='submit'
             disabled={isPending}
@@ -93,41 +113,61 @@ const WaitlistSignup = ({
     <div className={`relative ${className}`}>
       <form action={handleSubmit} className='space-y-4'>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+          <div>
+            <label className='block text-sm font-medium text-gray-700 mb-2'>
+              First Name *
+            </label>
+            <input
+              type='text'
+              name='firstName'
+              placeholder='First name'
+              className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all text-gray-900 placeholder-gray-500'
+              required
+              disabled={isPending}
+            />
+          </div>
+          <div>
+            <label className='block text-sm font-medium text-gray-700 mb-2'>
+              Last Name *
+            </label>
+            <input
+              type='text'
+              name='lastName'
+              placeholder='Last name'
+              className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all text-gray-900 placeholder-gray-500'
+              required
+              disabled={isPending}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label className='block text-sm font-medium text-gray-700 mb-2'>
+            Email Address *
+          </label>
           <input
-            type='text'
-            name='firstName'
-            placeholder='First name *'
-            className='px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
-            required
-            disabled={isPending}
-          />
-          <input
-            type='text'
-            name='lastName'
-            placeholder='Last name *'
-            className='px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
+            type='email'
+            name='email'
+            placeholder='Your email address'
+            className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all text-gray-900 placeholder-gray-500'
             required
             disabled={isPending}
           />
         </div>
 
-        <input
-          type='email'
-          name='email'
-          placeholder='Your email address *'
-          className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
-          required
-          disabled={isPending}
-        />
-
-        <input
-          type='text'
-          name='location'
-          placeholder='Your city/municipality * (e.g., Quezon City, Makati, Cebu City)'
-          className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all'
-          required
-          disabled={isPending}
-        />
+        <div>
+          <label className='block text-sm font-medium text-gray-700 mb-2'>
+            City/Municipality *
+          </label>
+          <input
+            type='text'
+            name='location'
+            placeholder='e.g., Quezon City, Makati, Cebu City'
+            className='w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#F5A623] focus:ring-2 focus:ring-[#F5A623]/20 outline-none transition-all text-gray-900 placeholder-gray-500'
+            required
+            disabled={isPending}
+          />
+        </div>
 
         <div>
           <label className='block text-sm font-medium text-gray-700 mb-2'>
