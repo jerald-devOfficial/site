@@ -1,3 +1,4 @@
+import ImageDTI from '@/components/about/ImageDTI'
 import ContactInfo from '@/components/contact-info'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
@@ -116,6 +117,86 @@ const AboutUs = () => {
             that welcomes people from all backgrounds, income levels, and walks
             of life.
           </p>
+        </div>
+      )
+    },
+    {
+      id: 'legal-compliance',
+      title: '3.5. Legal Compliance & Registration',
+      icon: <Award className='w-5 h-5' />,
+      content: (
+        <div>
+          <p className='mb-4'>
+            TindaMo operates as a fully registered and compliant business entity
+            in the Philippines, ensuring transparency and accountability to our
+            community.
+          </p>
+
+          <h4 className='font-semibold text-gray-800 mb-3'>
+            🏛️ Department of Trade and Industry (DTI) Registration
+          </h4>
+          <p className='mb-4'>
+            We are officially registered with the Department of Trade and
+            Industry (DTI) under Business Name Registration No. 7248388,
+            validating our commitment to operating within the legal framework of
+            Philippine commerce.
+          </p>
+
+          <div className='bg-green-50 border border-green-200 rounded-lg p-4 mb-4'>
+            <div className='flex flex-col md:flex-row gap-4 items-start'>
+              <div className='flex-1'>
+                <h5 className='font-semibold text-green-800 mb-2'>
+                  Business Registration Details
+                </h5>
+                <ul className='text-green-700 text-sm space-y-1'>
+                  <li>
+                    <strong>Business Name:</strong> TINDAMOPH ONLINE STORE
+                  </li>
+                  <li>
+                    <strong>Registration No:</strong> 7248388
+                  </li>
+                  <li>
+                    <strong>Location:</strong> City of Iligan, Region X
+                    (Northern Mindanao)
+                  </li>
+                  <li>
+                    <strong>Valid:</strong> June 25, 2025 - June 25, 2030
+                  </li>
+                  <li>
+                    <strong>Registrant:</strong> Franchesco Carlione Salandron
+                    Tan
+                  </li>
+                </ul>
+              </div>
+              <div className='flex-shrink-0'>
+                <ImageDTI />
+              </div>
+            </div>
+          </div>
+
+          <h4 className='font-semibold text-gray-800 mb-3'>
+            📋 Our Commitment to Compliance
+          </h4>
+          <ul className='list-disc list-inside mb-4 text-gray-600 space-y-1'>
+            <li>
+              Full compliance with Philippine business registration requirements
+            </li>
+            <li>
+              Regular renewal of all necessary business permits and licenses
+            </li>
+            <li>Adherence to consumer protection laws and regulations</li>
+            <li>Transparency in all business operations and practices</li>
+            <li>Cooperation with government agencies and regulatory bodies</li>
+          </ul>
+
+          <div className='bg-blue-50 border-l-4 border-blue-400 p-4'>
+            <p className='text-sm text-blue-800'>
+              <strong>Trust & Transparency:</strong> Our official DTI
+              registration demonstrates our commitment to operating
+              transparently and in full compliance with Philippine law, giving
+              you confidence in our platform&apos;s legitimacy and reliability.
+            </p>
+          </div>
         </div>
       )
     },
@@ -305,6 +386,7 @@ const AboutUs = () => {
   return (
     <div className='bg-[#F9FAFB] text-[#222] font-sans'>
       <Header />
+
       <div className='min-h-screen bg-gradient-to-br from-slate-50 to-gray-100'>
         <div className='bg-white shadow-sm'>
           <div className='max-w-4xl mx-auto px-6 py-8'>

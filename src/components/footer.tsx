@@ -44,6 +44,9 @@ const Footer = () => (
             <span className='bg-purple-500/20 text-purple-300 px-2 sm:px-3 py-1 rounded-full whitespace-nowrap'>
               🚀 Community Driven
             </span>
+            <span className='bg-yellow-500/20 text-yellow-300 px-2 sm:px-3 py-1 rounded-full whitespace-nowrap'>
+              🏛️ DTI Registered
+            </span>
           </div>
         </div>
 
