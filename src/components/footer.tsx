@@ -205,26 +205,12 @@ const Footer = () => (
 
             {/* Copyright */}
             <div className='text-center md:text-right text-xs sm:text-sm text-blue-200'>
-              <p>© 2024 TindaMo. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} TindaMo. All rights reserved.</p>
               <p className='mt-1'>Made with ❤️ for the Filipino community</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    {/* Bottom wave decoration */}
-    <div className='absolute bottom-0 left-0 w-full overflow-hidden'>
-      <svg
-        className='relative block w-full h-12'
-        viewBox='0 0 1200 120'
-        preserveAspectRatio='none'
-      >
-        <path
-          d='M0,0 L0,60 Q300,120 600,60 T1200,60 L1200,0 Z'
-          fill='rgba(0,0,0,0.1)'
-        />
-      </svg>
     </div>
   </footer>
 )

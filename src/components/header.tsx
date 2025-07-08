@@ -37,14 +37,15 @@ const Header = () => {
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500 to-green-500 rounded-full blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300'></div>
 
               {/* Logo Container */}
-              <div className='relative bg-gradient-to-br from-blue-500 to-green-500 p-2 rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105'>
+              <div className='relative bg-gradient-to-br from-white to-orange-100 p-1 rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105'>
                 <Image
                   src='/logo.png'
                   alt='TindaMo Logo'
-                  width={32}
-                  height={32}
+                  width={40}
+                  height={40}
                   className='relative z-10 drop-shadow-sm'
                   priority
+                  sizes='100%'
                 />
               </div>
             </div>
@@ -57,7 +58,7 @@ const Header = () => {
                 TindaMo
               </span>
               <span className='text-xs text-gray-500 font-medium tracking-wide -mt-1'>
-                Local Trading
+                Hyper-Local Marketplace
               </span>
             </div>
           </Link>
