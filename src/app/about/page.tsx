@@ -3,7 +3,39 @@ import ContactInfo from '@/components/contact-info'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import { Award, Globe, Heart, MapPin, Target, Users, Zap } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
+
+const title = 'TindaMo - About Page 🇵🇭'
+const description =
+  'TindaMo is your go-to hyper-local marketplace, where you can effortlessly discover, trade, and bid on items and services within your community. Join us to connect with neighbors and find exactly what you need while fostering meaningful exchanges.'
+const alt = 'TindaMo - About Page 🇵🇭'
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  openGraph: {
+    title: title,
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    },
+    siteName: title,
+    description: description
+  }
+}
 
 const AboutUs = () => {
   const sections = [
@@ -392,7 +424,7 @@ const AboutUs = () => {
           <div className='max-w-4xl mx-auto px-6 py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
-                src='/logo.png'
+                src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                 alt='TindaMo Logo'
                 width={40}
                 height={40}

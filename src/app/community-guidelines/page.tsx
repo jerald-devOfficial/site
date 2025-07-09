@@ -13,7 +13,35 @@ import {
   Star,
   Users
 } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'TindaMo Community Guidelines 🇵🇭',
+  description:
+    'Read the official TindaMo Community Guidelines. Learn about our values, acceptable behavior, prohibited activities, and how we keep our Filipino trading community safe and welcoming.',
+  openGraph: {
+    title: 'TindaMo Community Guidelines 🇵🇭',
+    description:
+      'Read the official TindaMo Community Guidelines. Learn about our values, acceptable behavior, prohibited activities, and how we keep our Filipino trading community safe and welcoming.',
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Community Guidelines',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Community Guidelines',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  }
+}
 
 const CommunityGuidelines = () => {
   const sections = [
@@ -491,7 +519,7 @@ const CommunityGuidelines = () => {
           <div className='max-w-4xl mx-auto px-6 py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
-                src='/logo.png'
+                src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                 alt='TindaMo Logo'
                 width={40}
                 height={40}

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: description,
   twitter: {
     images: {
-      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/logo-seo.png`,
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
       alt: alt,
       type: 'image/png',
       width: 300,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: title,
     images: {
-      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/logo-seo.png`,
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
       alt: alt,
       type: 'image/png',
       width: 300,

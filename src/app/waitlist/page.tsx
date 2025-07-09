@@ -1,19 +1,32 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import WaitlistSignup from '@/components/waitlist-signup'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title:
-    'Join TindaMo Waitlist - Be Among the First to Experience Local Trading',
+export const metadata: Metadata = {
+  title: 'Join the TindaMo Waitlist 🇵🇭',
   description:
-    'Join thousands of Filipinos waiting to trade, sell, and discover amazing deals in their local community. Get early access and exclusive perks when TindaMo launches in your area!',
-  keywords:
-    'TindaMo waitlist, early access, local marketplace, Filipino trading, community marketplace, pre-launch signup',
+    'Be the first to know when TindaMo launches in your area! Join our waitlist and get exclusive updates for the Filipino trading community.',
   openGraph: {
-    title: 'Join TindaMo Waitlist - Early Access to Local Trading',
+    title: 'Join the TindaMo Waitlist 🇵🇭',
     description:
-      'Be among the first to experience TindaMo when we launch in your area. Join 2,500+ Filipinos already waiting!',
-    type: 'website'
+      'Be the first to know when TindaMo launches in your area! Join our waitlist and get exclusive updates for the Filipino trading community.',
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Waitlist',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Waitlist',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
   }
 }
 

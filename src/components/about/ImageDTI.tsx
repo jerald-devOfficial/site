@@ -27,7 +27,7 @@ const ImageDTI = () => {
               <X className='w-8 h-8' />
             </button>
             <Image
-              src='/images/dti/tindamo_dti.png'
+              src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/dti/tindamo_dti.png`}
               alt='TindaMo DTI Business Registration Certificate - Full Size'
               width={800}
               height={1120}
@@ -40,7 +40,7 @@ const ImageDTI = () => {
       )}
 
       <Image
-        src='/images/dti/tindamo_dti.png'
+        src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/dti/tindamo_dti.png`}
         alt='TindaMo DTI Business Registration Certificate'
         width={200}
         height={280}

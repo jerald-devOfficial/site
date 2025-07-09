@@ -68,7 +68,7 @@ const Blog = () => {
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
-                src='/logo.png'
+                src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                 alt='TindaMo Logo'
                 width={32}
                 height={32}

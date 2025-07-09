@@ -1,9 +1,36 @@
-import React from 'react';
-import { Shield, Lock, Eye, Users, FileText } from 'lucide-react';
-import Header from '@/components/header';
-import Image from 'next/image';
-import Footer from '@/components/footer';
-import ContactInfo from '@/components/contact-info';
+import ContactInfo from '@/components/contact-info'
+import Footer from '@/components/footer'
+import Header from '@/components/header'
+import { Eye, FileText, Lock, Shield, Users } from 'lucide-react'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'TindaMo Privacy Policy 🇵🇭',
+  description:
+    'Learn how TindaMo collects, uses, and protects your personal information. Your privacy and security are our top priorities in the Filipino trading community.',
+  openGraph: {
+    title: 'TindaMo Privacy Policy 🇵🇭',
+    description:
+      'Learn how TindaMo collects, uses, and protects your personal information. Your privacy and security are our top priorities in the Filipino trading community.',
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Privacy Policy',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Privacy Policy',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  }
+}
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -27,7 +54,7 @@ const PrivacyPolicy = () => {
             Service.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'information-collection',
@@ -79,7 +106,7 @@ const PrivacyPolicy = () => {
             <li>Marketing and advertising partners</li>
           </ul>
         </div>
-      ),
+      )
     },
     {
       id: 'how-we-use',
@@ -131,7 +158,7 @@ const PrivacyPolicy = () => {
             <li>Enforcing our terms of service and policies</li>
           </ul>
         </div>
-      ),
+      )
     },
     {
       id: 'information-sharing',
@@ -185,7 +212,7 @@ const PrivacyPolicy = () => {
             direction.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'data-security',
@@ -210,7 +237,7 @@ const PrivacyPolicy = () => {
             storage is 100% secure, and we cannot guarantee absolute security.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'your-rights',
@@ -258,9 +285,9 @@ const PrivacyPolicy = () => {
             provided in the Contact section below.
           </p>
         </div>
-      ),
-    },
-  ];
+      )
+    }
+  ]
 
   return (
     <div className='bg-[#F9FAFB] text-[#222] font-sans'>
@@ -270,7 +297,7 @@ const PrivacyPolicy = () => {
           <div className='max-w-4xl mx-auto px-6 py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
-                src='/logo.png'
+                src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                 alt='TindaMo Logo'
                 width={40}
                 height={40}
@@ -297,7 +324,8 @@ const PrivacyPolicy = () => {
                     <a
                       key={section.id}
                       href={`#${section.id}`}
-                      className='flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors duration-200 py-1'>
+                      className='flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors duration-200 py-1'
+                    >
                       {section.icon}
                       <span className='text-sm'>{section.title}</span>
                     </a>
@@ -310,7 +338,8 @@ const PrivacyPolicy = () => {
                   <section
                     key={section.id}
                     id={section.id}
-                    className='scroll-mt-20'>
+                    className='scroll-mt-20'
+                  >
                     <div className='flex items-center space-x-3 mb-4'>
                       <div className='p-2 bg-blue-100 rounded-lg text-blue-600'>
                         {section.icon}
@@ -406,7 +435,7 @@ const PrivacyPolicy = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default PrivacyPolicy;
+export default PrivacyPolicy

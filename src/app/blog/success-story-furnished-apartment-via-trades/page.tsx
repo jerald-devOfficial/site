@@ -1,7 +1,41 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+const title =
+  'TindaMo - Success Story: Paano Ko Na-furnish ang Buong Apartment through Trades 🇵🇭'
+const description =
+  'Discover how Miguel furnished his entire apartment through smart trades on TindaMo – spending less than ₱15,000 cash for a fully furnished home.'
+const alt =
+  'TindaMo - Success Story: Paano Ko Na-furnish ang Buong Apartment through Trades 🇵🇭'
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/apartment-transformation-filipino.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  openGraph: {
+    title: title,
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/apartment-transformation-filipino.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    },
+    siteName: title,
+    description: description
+  }
+}
 
 const SuccessStoryFurnishedApartment = () => {
   return (
@@ -44,7 +78,7 @@ const SuccessStoryFurnishedApartment = () => {
             <div className='p-4 sm:p-6 lg:p-8'>
               <div className='relative w-full h-48 sm:h-56 lg:h-64 mb-6 sm:mb-8 rounded-lg sm:rounded-xl overflow-hidden'>
                 <Image
-                  src='/images/blog/apartment-transformation-filipino.png'
+                  src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/apartment-transformation-filipino.png`}
                   alt='Filipino apartment transformation through trades'
                   fill
                   className='object-cover'

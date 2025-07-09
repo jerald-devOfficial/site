@@ -1,7 +1,39 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+const title = 'TindaMo - 5 Creative Barter Ideas for Spring Cleaning 🇵🇭'
+const description =
+  'Discover 5 creative barter ideas for spring cleaning with TindaMo – the hyper-local, hassle-free marketplace.'
+const alt = 'TindaMo - 5 Creative Barter Ideas for Spring Cleaning 🇵🇭'
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/spring-cleaning-filipino.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  openGraph: {
+    title: title,
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/spring-cleaning-filipino.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    },
+    siteName: title,
+    description: description
+  }
+}
 
 const CreativeBarterIdeas = () => {
   return (
@@ -43,7 +75,7 @@ const CreativeBarterIdeas = () => {
             <div className='p-4 sm:p-6 lg:p-8'>
               <div className='relative w-full h-48 sm:h-56 lg:h-64 mb-6 sm:mb-8 rounded-lg sm:rounded-xl overflow-hidden'>
                 <Image
-                  src='/images/blog/spring-cleaning-filipino.png'
+                  src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/spring-cleaning-filipino.png`}
                   alt='Filipino family spring cleaning'
                   fill
                   className='object-cover'

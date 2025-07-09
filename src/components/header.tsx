@@ -39,7 +39,7 @@ const Header = () => {
               {/* Logo Container */}
               <div className='relative bg-gradient-to-br from-white to-orange-100 p-1 rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105'>
                 <Image
-                  src='/logo.png'
+                  src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                   alt='TindaMo Logo'
                   width={40}
                   height={40}

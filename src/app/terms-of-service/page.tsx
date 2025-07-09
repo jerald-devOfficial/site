@@ -1,18 +1,45 @@
-import React from 'react';
+import ContactInfo from '@/components/contact-info'
+import Footer from '@/components/footer'
+import Header from '@/components/header'
 import {
-  FileText,
-  Shield,
-  Users,
   AlertTriangle,
-  Scale,
-  Globe,
-  CreditCard,
   Ban,
-} from 'lucide-react';
-import Image from 'next/image';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import ContactInfo from '@/components/contact-info';
+  CreditCard,
+  FileText,
+  Globe,
+  Scale,
+  Shield,
+  Users
+} from 'lucide-react'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'TindaMo Terms of Service 🇵🇭',
+  description:
+    'Review the TindaMo Terms of Service. Understand your rights, responsibilities, and the rules for using our Filipino trading platform.',
+  openGraph: {
+    title: 'TindaMo Terms of Service 🇵🇭',
+    description:
+      'Review the TindaMo Terms of Service. Understand your rights, responsibilities, and the rules for using our Filipino trading platform.',
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Terms of Service',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Terms of Service',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  }
+}
 
 const TermsOfService = () => {
   const sections = [
@@ -38,7 +65,7 @@ const TermsOfService = () => {
             TindaMo. Please read them carefully.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'description',
@@ -65,7 +92,7 @@ const TermsOfService = () => {
             </p>
           </div>
         </div>
-      ),
+      )
     },
     {
       id: 'user-accounts',
@@ -104,7 +131,7 @@ const TermsOfService = () => {
             other users, us, or third parties.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'user-conduct',
@@ -164,7 +191,7 @@ const TermsOfService = () => {
             necessary.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'intellectual-property',
@@ -208,7 +235,7 @@ const TermsOfService = () => {
             contact us with details of the alleged infringement.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'privacy',
@@ -234,7 +261,7 @@ const TermsOfService = () => {
             </p>
           </div>
         </div>
-      ),
+      )
     },
     {
       id: 'payments',
@@ -283,7 +310,7 @@ const TermsOfService = () => {
             and respond within a reasonable time.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'disclaimers',
@@ -335,7 +362,7 @@ const TermsOfService = () => {
             practices of third-party services.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'governing-law',
@@ -378,9 +405,9 @@ const TermsOfService = () => {
             arbitration.
           </p>
         </div>
-      ),
-    },
-  ];
+      )
+    }
+  ]
 
   return (
     <div className='bg-[#F9FAFB] text-[#222] font-sans'>
@@ -390,7 +417,7 @@ const TermsOfService = () => {
           <div className='max-w-4xl mx-auto px-6 py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
-                src='/logo.png'
+                src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                 alt='TindaMo Logo'
                 width={40}
                 height={40}
@@ -435,7 +462,8 @@ const TermsOfService = () => {
                     <a
                       key={section.id}
                       href={`#${section.id}`}
-                      className='flex items-center space-x-2 text-slate-600 hover:text-slate-800 transition-colors duration-200 py-1'>
+                      className='flex items-center space-x-2 text-slate-600 hover:text-slate-800 transition-colors duration-200 py-1'
+                    >
                       {section.icon}
                       <span className='text-sm'>{section.title}</span>
                     </a>
@@ -448,7 +476,8 @@ const TermsOfService = () => {
                   <section
                     key={section.id}
                     id={section.id}
-                    className='scroll-mt-20'>
+                    className='scroll-mt-20'
+                  >
                     <div className='flex items-center space-x-3 mb-4'>
                       <div className='p-2 bg-slate-100 rounded-lg text-slate-600'>
                         {section.icon}
@@ -561,7 +590,7 @@ const TermsOfService = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default TermsOfService;
+export default TermsOfService

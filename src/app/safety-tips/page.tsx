@@ -11,7 +11,35 @@ import {
   Shield,
   Users
 } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'TindaMo Safety Tips 🇵🇭',
+  description:
+    'Stay safe while trading on TindaMo! Read our essential safety tips for secure and positive experiences in the Filipino community.',
+  openGraph: {
+    title: 'TindaMo Safety Tips 🇵🇭',
+    description:
+      'Stay safe while trading on TindaMo! Read our essential safety tips for secure and positive experiences in the Filipino community.',
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Safety Tips',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/tindamo.png`,
+      alt: 'TindaMo Safety Tips',
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  }
+}
 
 const SafetyTips = () => {
   const sections = [
@@ -438,7 +466,7 @@ const SafetyTips = () => {
           <div className='max-w-4xl mx-auto px-6 py-8'>
             <div className='flex items-center space-x-3 mb-4'>
               <Image
-                src='/logo.png'
+                src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/brand/logo.png`}
                 alt='TindaMo Logo'
                 width={40}
                 height={40}

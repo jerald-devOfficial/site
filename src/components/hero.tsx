@@ -39,7 +39,7 @@ const Hero = () => (
       <div className='mb-6 sm:mb-8 relative'>
         <div className='w-full max-w-3xl mx-auto h-48 sm:h-64 lg:h-72 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white/20 backdrop-blur-sm'>
           <Image
-            src='/images/landing-hero.png'
+            src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/general/landing-hero.png`}
             alt='Filipino neighborhood marketplace'
             fill
             className='object-cover'

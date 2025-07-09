@@ -1,7 +1,39 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+const title = 'TindaMo - Paano Manalo sa Auctions Nang Hindi Nag-overbid 🇵🇭'
+const description =
+  'Learn proven strategies to win auctions without overbidding on TindaMo – the hyper-local marketplace where smart bidding leads to great deals.'
+const alt = 'TindaMo - Paano Manalo sa Auctions Nang Hindi Nag-overbid 🇵🇭'
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  twitter: {
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/auction-strategy-filipino.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    }
+  },
+  openGraph: {
+    title: title,
+    images: {
+      url: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/auction-strategy-filipino.png`,
+      alt: alt,
+      type: 'image/png',
+      width: 300,
+      height: 300
+    },
+    siteName: title,
+    description: description
+  }
+}
 
 const WinAuctionsGuide = () => {
   return (
@@ -43,7 +75,7 @@ const WinAuctionsGuide = () => {
             <div className='p-4 sm:p-6 lg:p-8'>
               <div className='relative w-full h-48 sm:h-56 lg:h-64 mb-6 sm:mb-8 rounded-lg sm:rounded-xl overflow-hidden'>
                 <Image
-                  src='/images/blog/auction-strategy-filipino.png'
+                  src={`${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/blog/auction-strategy-filipino.png`}
                   alt='Filipino auction bidding strategy'
                   fill
                   className='object-cover'
