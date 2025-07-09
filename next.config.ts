@@ -10,7 +10,8 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'pub-c9b73400c3ca43d58d11a96f713ffe4f.r2.dev'
+        hostname: 'pub-c9b73400c3ca43d58d11a96f713ffe4f.r2.dev',
+        pathname: '/images/**'
       }
     ]
   }

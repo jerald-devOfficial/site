@@ -1,84 +1,75 @@
-import ikeadining from '@/assets/images/listing/ikeadining.png';
-import mountainbike from '@/assets/images/listing/mountainbike.png';
-import mcbookpro from '@/assets/images/listing/mcbookpro.png';
-import accousticguitar from '@/assets/images/listing/accousticguitar.png';
-import mixer from '@/assets/images/listing/mixer.png';
-import tent from '@/assets/images/listing/tent.png';
-import lego from '@/assets/images/listing/lego.png';
-import chair from '@/assets/images/listing/chair.png';
-import { StaticImageData } from 'next/image';
 export interface DemoListing {
-  id: number;
-  title: string;
-  image: StaticImageData;
-  distance: string;
-  tags: string[];
-  category: string;
+  id: number
+  title: string
+  image: string
+  distance: string
+  tags: string[]
+  category: string
 }
 
 export const demoListings: DemoListing[] = [
   {
     id: 1,
     title: 'IKEA Dining Table',
-    image: ikeadining,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/ikea-dining-table.jpg`,
     distance: '0.3 mi away',
     tags: ['Pending'],
-    category: 'Furniture',
+    category: 'Furniture'
   },
   {
     id: 2,
     title: 'Mountain Bike',
-    image: mountainbike,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/mountain-bike.jpg`,
     distance: '0.5 mi away',
     tags: ['Barter Accepted'],
-    category: 'Sports',
+    category: 'Sports'
   },
   {
     id: 3,
     title: 'MacBook Pro 2020',
-    image: mcbookpro,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/macbook-pro.png`,
     distance: '0.7 mi away',
     tags: ['Pending'],
-    category: 'Electronics',
+    category: 'Electronics'
   },
   {
     id: 4,
     title: 'Acoustic Guitar',
-    image: accousticguitar,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/acoustic-guitar.jpg`,
     distance: '0.2 mi away',
     tags: ['Barter Accepted'],
-    category: 'Music',
+    category: 'Music'
   },
   {
     id: 5,
     title: 'KitchenAid Mixer',
-    image: mixer,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/kitchenaid-mixer.jpeg`,
     distance: '0.4 mi away',
     tags: ['Barter Accepted'],
-    category: 'Appliances',
+    category: 'Appliances'
   },
   {
     id: 6,
     title: 'Camping Tent (4-Person)',
-    image: tent,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/tent.jpg`,
     distance: '0.6 mi away',
     tags: ['Pending'],
-    category: 'Outdoors',
+    category: 'Outdoors'
   },
   {
     id: 7,
     title: 'LEGO Star Wars Set',
-    image: lego,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/lego.jpg`,
     distance: '0.8 mi away',
     tags: ['Barter Accepted'],
-    category: 'Toys',
+    category: 'Toys'
   },
   {
     id: 8,
     title: 'Office Chair (Ergonomic)',
-    image: chair,
+    image: `${process.env.NEXT_PUBLIC_R2_FILES_URL}/images/listing/chair.jpg`,
     distance: '0.9 mi away',
     tags: ['Pending'],
-    category: 'Furniture',
-  },
-];
+    category: 'Furniture'
+  }
+]
