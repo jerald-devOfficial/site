@@ -1,201 +1,224 @@
-import { CheckCircle, MessageCircle, Shield, Star, Users } from 'lucide-react'
+import { CheckCircle, Heart, MessageCircle, Shield, Users } from 'lucide-react'
 
 const TrustSafety = () => (
-  <section className='w-full bg-white py-16' id='trust-safety'>
-    <div className='max-w-6xl mx-auto px-6'>
+  <section className='w-full bg-white py-16 sm:py-24 relative overflow-hidden'>
+    {/* Background decoration */}
+    <div className='absolute inset-0 opacity-5'>
+      <div className='absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-20 right-20 w-40 h-40 bg-green-400 rounded-full blur-2xl'></div>
+      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-purple-400 rounded-full blur-xl'></div>
+    </div>
+
+    <div className='max-w-6xl mx-auto px-6 relative z-10'>
       <div className='text-center mb-16'>
+        <div className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-blue-200'>
+          <Shield className='w-4 h-4' />
+          <span>Trust & Safety First</span>
+        </div>
         <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-          Trusted by Your Community
+          Built for Trust & Safety
         </h2>
         <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-          Built with safety and trust at the core. Every feature is designed to
-          create secure, positive experiences for all community members.
+          Every feature is designed with Filipino community values in mind. We
+          prioritize safe trading, verified identities, and positive experiences
+          for all members.
         </p>
       </div>
 
-      {/* Stats Section */}
+      {/* Trust Features Section */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
         <div className='text-center group'>
-          <div className='bg-gradient-to-br from-green-100 to-green-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
+          <div className='bg-gradient-to-br from-green-100 to-green-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
             <CheckCircle className='w-10 h-10 text-green-600' />
           </div>
-          <div className='text-2xl md:text-3xl font-bold text-gray-900 mb-2'>
-            15,000+
+          <div className='text-gray-600 font-medium mb-2'>
+            Identity Verification
           </div>
-          <div className='text-gray-600 font-medium'>Verified Users</div>
-          <div className='text-sm text-gray-500 mt-1'>Identity confirmed</div>
+          <div className='text-sm text-gray-500 mt-1'>
+            Phone & email verification required
+          </div>
         </div>
 
         <div className='text-center group'>
-          <div className='bg-gradient-to-br from-blue-100 to-blue-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
+          <div className='bg-gradient-to-br from-blue-100 to-blue-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
             <Shield className='w-10 h-10 text-blue-600' />
           </div>
-          <div className='text-2xl md:text-3xl font-bold text-gray-900 mb-2'>
-            50,000+
-          </div>
-          <div className='text-gray-600 font-medium'>Safe Trades</div>
+          <div className='text-gray-600 font-medium mb-2'>Safe Trading</div>
           <div className='text-sm text-gray-500 mt-1'>
-            Zero incidents reported
+            Public meetup spots recommended
           </div>
         </div>
 
         <div className='text-center group'>
-          <div className='bg-gradient-to-br from-purple-100 to-purple-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
+          <div className='bg-gradient-to-br from-purple-100 to-purple-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
             <MessageCircle className='w-10 h-10 text-purple-600' />
           </div>
-          <div className='text-2xl md:text-3xl font-bold text-gray-900 mb-2'>
-            2.3M+
+          <div className='text-gray-600 font-medium mb-2'>Secure Chat</div>
+          <div className='text-sm text-gray-500 mt-1'>
+            In-app messaging system
           </div>
-          <div className='text-gray-600 font-medium'>Messages Sent</div>
-          <div className='text-sm text-gray-500 mt-1'>Secure chat system</div>
         </div>
 
         <div className='text-center group'>
-          <div className='bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
-            <Star className='w-10 h-10 text-yellow-600' />
+          <div className='bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
+            <Users className='w-10 h-10 text-yellow-600' />
           </div>
-          <div className='text-2xl md:text-3xl font-bold text-gray-900 mb-2'>
-            4.9/5
+          <div className='text-gray-600 font-medium mb-2'>Community Focus</div>
+          <div className='text-sm text-gray-500 mt-1'>
+            Filipino values & culture
           </div>
-          <div className='text-gray-600 font-medium'>Safety Rating</div>
-          <div className='text-sm text-gray-500 mt-1'>User satisfaction</div>
         </div>
       </div>
 
       {/* Features Grid */}
       <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
-        <div className='bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200'>
+        <div className='bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200 hover:shadow-xl transition-shadow duration-300'>
           <div className='bg-white rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm'>
             <CheckCircle className='w-8 h-8 text-green-600' />
           </div>
-          <h3 className='text-xl font-semibold text-gray-900 mb-3'>
-            Identity Verification
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Profile Verification
           </h3>
           <p className='text-gray-600 mb-4'>
-            Multi-step verification process including phone, email, and optional
-            ID verification for enhanced trust.
+            Every user goes through identity verification including phone number
+            and email confirmation before they can start trading.
           </p>
-          <ul className='text-sm text-gray-600 space-y-1'>
-            <li>✓ Phone number verification</li>
-            <li>✓ Email confirmation</li>
-            <li>✓ Optional government ID</li>
-            <li>✓ Social media linking</li>
+          <ul className='space-y-2 text-sm text-gray-600'>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-500'>✓</span>
+              <span>Phone number verification</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-500'>✓</span>
+              <span>Email address confirmation</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-500'>✓</span>
+              <span>Profile photo requirement</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-500'>✓</span>
+              <span>Location verification</span>
+            </li>
           </ul>
         </div>
 
-        <div className='bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200'>
+        <div className='bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200 hover:shadow-xl transition-shadow duration-300'>
           <div className='bg-white rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm'>
             <Shield className='w-8 h-8 text-blue-600' />
           </div>
-          <h3 className='text-xl font-semibold text-gray-900 mb-3'>
-            Secure Communications
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Safe Trading Practices
           </h3>
           <p className='text-gray-600 mb-4'>
-            Built-in encrypted messaging keeps your personal information private
-            until you&apos;re ready to share.
+            We provide guidelines and tools to help you trade safely within your
+            local community, always prioritizing your security.
           </p>
-          <ul className='text-sm text-gray-600 space-y-1'>
-            <li>✓ End-to-end encryption</li>
-            <li>✓ No personal info sharing</li>
-            <li>✓ Report & block features</li>
-            <li>✓ Safe meetup suggestions</li>
+          <ul className='space-y-2 text-sm text-gray-600'>
+            <li className='flex items-center gap-2'>
+              <span className='text-blue-500'>✓</span>
+              <span>Public meeting place recommendations</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-blue-500'>✓</span>
+              <span>Safety tips and guidelines</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-blue-500'>✓</span>
+              <span>Report and block features</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-blue-500'>✓</span>
+              <span>Community moderation</span>
+            </li>
           </ul>
         </div>
 
-        <div className='bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200'>
+        <div className='bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border border-purple-200 hover:shadow-xl transition-shadow duration-300'>
           <div className='bg-white rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm'>
-            <Users className='w-8 h-8 text-purple-600' />
+            <MessageCircle className='w-8 h-8 text-purple-600' />
           </div>
-          <h3 className='text-xl font-semibold text-gray-900 mb-3'>
-            Community Moderation
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Secure Communication
           </h3>
           <p className='text-gray-600 mb-4'>
-            24/7 community support team actively monitors and maintains a safe
-            trading environment.
+            All conversations happen within our secure platform, keeping your
+            personal information private until you&apos;re ready to share.
           </p>
-          <ul className='text-sm text-gray-600 space-y-1'>
-            <li>✓ 24/7 support team</li>
-            <li>✓ Rapid response times</li>
-            <li>✓ User reporting system</li>
-            <li>✓ Safety guidelines</li>
+          <ul className='space-y-2 text-sm text-gray-600'>
+            <li className='flex items-center gap-2'>
+              <span className='text-purple-500'>✓</span>
+              <span>In-app messaging only</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-purple-500'>✓</span>
+              <span>Photo sharing capabilities</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-purple-500'>✓</span>
+              <span>Message history preservation</span>
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-purple-500'>✓</span>
+              <span>Privacy controls</span>
+            </li>
           </ul>
         </div>
       </div>
 
-      {/* Testimonials */}
-      <div className='bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8'>
-        <h3 className='text-2xl font-semibold text-gray-900 text-center mb-8'>
-          What Our Community Says
-        </h3>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-          <div className='bg-white rounded-xl p-6 shadow-sm border border-gray-200'>
-            <div className='flex items-center mb-4'>
-              <div className='flex text-yellow-400 mb-2'>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className='w-4 h-4 fill-current' />
-                ))}
-              </div>
+      {/* Community Guidelines */}
+      <div className='bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200 relative overflow-hidden'>
+        {/* Background decoration */}
+        <div className='absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-full -translate-y-16 translate-x-16 opacity-30'></div>
+        <div className='absolute bottom-0 left-0 w-24 h-24 bg-orange-200 rounded-full translate-y-12 -translate-x-12 opacity-30'></div>
+
+        <div className='relative z-10'>
+          <div className='text-center mb-8'>
+            <div className='w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg'>
+              <Heart className='w-8 h-8 text-white' />
             </div>
-            <p className='text-gray-700 italic mb-4'>
-              &quot;I&apos;ve completed over 20 trades and every experience has
-              been amazing. The verification process makes me feel so much
-              safer.&quot;
+            <h3 className='text-2xl font-bold text-gray-900 mb-4'>
+              Filipino Community Values 🇵🇭
+            </h3>
+            <p className='text-gray-600 max-w-3xl mx-auto'>
+              TindaMo is built around Filipino values of kapamilya,
+              pakikipagkapwa, and bayanihan. We foster a community where
+              neighbors help neighbors, just like the traditional Filipino way.
             </p>
-            <div className='flex items-center'>
-              <div className='w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3'>
-                <span className='text-blue-600 font-semibold'>AS</span>
-              </div>
-              <div>
-                <div className='font-semibold text-gray-900'>Ana Santos</div>
-                <div className='text-sm text-gray-500'>Quezon City</div>
-              </div>
-            </div>
           </div>
 
-          <div className='bg-white rounded-xl p-6 shadow-sm border border-gray-200'>
-            <div className='flex items-center mb-4'>
-              <div className='flex text-yellow-400 mb-2'>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className='w-4 h-4 fill-current' />
-                ))}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='text-center group hover:bg-white/50 p-4 rounded-xl transition-all duration-300'>
+              <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform'>
+                <span className='text-white text-2xl'>🤝</span>
               </div>
+              <h4 className='font-semibold text-gray-900 mb-2'>
+                Kapamilya Spirit
+              </h4>
+              <p className='text-sm text-gray-600'>
+                Treating every community member like family with respect and
+                care
+              </p>
             </div>
-            <p className='text-gray-700 italic mb-4'>
-              &quot;The secure chat feature is brilliant. I never have to share
-              my phone number until I&apos;m comfortable with the person.&quot;
-            </p>
-            <div className='flex items-center'>
-              <div className='w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3'>
-                <span className='text-green-600 font-semibold'>MR</span>
+            <div className='text-center group hover:bg-white/50 p-4 rounded-xl transition-all duration-300'>
+              <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform'>
+                <span className='text-white text-2xl'>❤️</span>
               </div>
-              <div>
-                <div className='font-semibold text-gray-900'>Miguel Rivera</div>
-                <div className='text-sm text-gray-500'>Makati City</div>
-              </div>
+              <h4 className='font-semibold text-gray-900 mb-2'>
+                Pakikipagkapwa
+              </h4>
+              <p className='text-sm text-gray-600'>
+                Shared identity and genuine concern for fellow community members
+              </p>
             </div>
-          </div>
-
-          <div className='bg-white rounded-xl p-6 shadow-sm border border-gray-200'>
-            <div className='flex items-center mb-4'>
-              <div className='flex text-yellow-400 mb-2'>
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className='w-4 h-4 fill-current' />
-                ))}
+            <div className='text-center group hover:bg-white/50 p-4 rounded-xl transition-all duration-300'>
+              <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform'>
+                <span className='text-white text-2xl'>🏘️</span>
               </div>
-            </div>
-            <p className='text-gray-700 italic mb-4'>
-              &quot;As a single parent, safety is my top priority.
-              TindaMo&apos;s verification and meetup guidelines give me peace of
-              mind.&quot;
-            </p>
-            <div className='flex items-center'>
-              <div className='w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3'>
-                <span className='text-purple-600 font-semibold'>JL</span>
-              </div>
-              <div>
-                <div className='font-semibold text-gray-900'>Jasmine Lopez</div>
-                <div className='text-sm text-gray-500'>Cebu City</div>
-              </div>
+              <h4 className='font-semibold text-gray-900 mb-2'>Bayanihan</h4>
+              <p className='text-sm text-gray-600'>
+                Community cooperation and helping each other succeed together
+              </p>
             </div>
           </div>
         </div>

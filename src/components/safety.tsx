@@ -1,334 +1,278 @@
-import Link from 'next/link'
+import {
+  AlertTriangle,
+  CheckCircle,
+  Heart,
+  MessageCircle,
+  Shield,
+  Star,
+  Users
+} from 'lucide-react'
 
 const Safety = () => (
-  <section
-    className='w-full max-w-6xl mx-auto flex flex-col gap-8 py-16 px-4'
-    id='safety'
-  >
-    <div className='text-center mb-8'>
-      <h2 className='text-3xl font-bold mb-4 text-gray-800'>
-        Safety & Community Guidelines 🛡️
-      </h2>
-      <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-        Ang inyong kaligtasan at magandang experience sa TindaMo ay aming
-        priority. Sundin ang mga guidelines na ito para sa safe at masayang
-        trading.
-      </p>
+  <section className='w-full bg-gradient-to-br from-red-50 to-orange-50 py-16 sm:py-24 relative overflow-hidden'>
+    {/* Background decoration */}
+    <div className='absolute inset-0 opacity-5'>
+      <div className='absolute top-10 left-10 w-32 h-32 bg-red-400 rounded-full blur-3xl'></div>
+      <div className='absolute bottom-20 right-20 w-40 h-40 bg-orange-400 rounded-full blur-2xl'></div>
+      <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-yellow-400 rounded-full blur-xl'></div>
     </div>
 
-    <div className='grid md:grid-cols-3 gap-8 mb-12'>
-      {/* Safe Exchanges */}
-      <div className='bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200 shadow-lg'>
-        <div className='text-center mb-6'>
-          <div className='w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg'>
-            <span className='text-3xl text-white'>🤝</span>
+    <div className='max-w-6xl mx-auto px-6 relative z-10'>
+      <div className='text-center mb-16'>
+        <div className='inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-orange-100 text-red-800 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-red-200'>
+          <Shield className='w-4 h-4' />
+          <span>Safety First</span>
+        </div>
+        <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+          Safe Trading Guidelines
+        </h2>
+        <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+          Your safety is our top priority. Follow these guidelines to ensure
+          secure and positive trading experiences within your Filipino
+          community.
+        </p>
+      </div>
+
+      {/* Safety Guidelines Grid */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+        {/* Secure Transactions */}
+        <div className='group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105'>
+          <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform'>
+            <CheckCircle className='w-8 h-8 text-white' />
           </div>
-          <h3 className='text-xl font-bold text-green-800'>
-            Safe na Exchanges
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Secure Transactions
           </h3>
+          <ul className='space-y-3 text-gray-600'>
+            <li className='flex items-start gap-3'>
+              <span className='text-green-500 mt-1'>✓</span>
+              <span>Meet in public, well-lit locations</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-green-500 mt-1'>✓</span>
+              <span>Bring a friend or family member</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-green-500 mt-1'>✓</span>
+              <span>Inspect items thoroughly before payment</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-green-500 mt-1'>✓</span>
+              <span>Use cash or secure payment methods</span>
+            </li>
+          </ul>
         </div>
 
-        <div className='space-y-4'>
-          <div className='flex items-start gap-3'>
-            <span className='text-green-600 text-xl'>📍</span>
-            <div>
-              <h4 className='font-semibold text-green-800'>
-                Meet sa Public Places
-              </h4>
-              <p className='text-green-700 text-sm'>
-                Mall, coffee shop, barangay hall, o ibang mataong lugar
-              </p>
-            </div>
+        {/* Communication Safety */}
+        <div className='group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105'>
+          <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform'>
+            <MessageCircle className='w-8 h-8 text-white' />
           </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-green-600 text-xl'>💬</span>
-            <div>
-              <h4 className='font-semibold text-green-800'>In-app Chat Only</h4>
-              <p className='text-green-700 text-sm'>
-                Lahat ng usapan sa TindaMo app para documented
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-green-600 text-xl'>🚨</span>
-            <div>
-              <h4 className='font-semibold text-green-800'>
-                Report Suspicious Activity
-              </h4>
-              <p className='text-green-700 text-sm'>
-                May nakita kayong hindi tama? I-report agad
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-green-600 text-xl'>👥</span>
-            <div>
-              <h4 className='font-semibold text-green-800'>Bring a Friend</h4>
-              <p className='text-green-700 text-sm'>
-                Especially sa mga big ticket items o first time meeting
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Fair Play */}
-      <div className='bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-8 border border-blue-200 shadow-lg'>
-        <div className='text-center mb-6'>
-          <div className='w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg'>
-            <span className='text-3xl text-white'>⚖️</span>
-          </div>
-          <h3 className='text-xl font-bold text-blue-800'>Fair Play</h3>
-        </div>
-
-        <div className='space-y-4'>
-          <div className='flex items-start gap-3'>
-            <span className='text-blue-600 text-xl'>❌</span>
-            <div>
-              <h4 className='font-semibold text-blue-800'>
-                No Prohibited Items
-              </h4>
-              <p className='text-blue-700 text-sm'>
-                Walang illegal, dangerous, o fake na products
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-blue-600 text-xl'>📸</span>
-            <div>
-              <h4 className='font-semibold text-blue-800'>
-                Honest Photos & Descriptions
-              </h4>
-              <p className='text-blue-700 text-sm'>
-                Real photos, exact condition, walang hidden defects
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-blue-600 text-xl'>💯</span>
-            <div>
-              <h4 className='font-semibold text-blue-800'>
-                Transparent Pricing
-              </h4>
-              <p className='text-blue-700 text-sm'>
-                Clear na presyo, walang hidden charges
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-blue-600 text-xl'>⏰</span>
-            <div>
-              <h4 className='font-semibold text-blue-800'>
-                Respect Time & Commitments
-              </h4>
-              <p className='text-blue-700 text-sm'>
-                On time sa meetup, hindi ghost sa transactions
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Community Moderation */}
-      <div className='bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 border border-purple-200 shadow-lg'>
-        <div className='text-center mb-6'>
-          <div className='w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg'>
-            <span className='text-3xl text-white'>👮</span>
-          </div>
-          <h3 className='text-xl font-bold text-purple-800'>
-            Community Moderation
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Communication Safety
           </h3>
-        </div>
-
-        <div className='space-y-4'>
-          <div className='flex items-start gap-3'>
-            <span className='text-purple-600 text-xl'>📋</span>
-            <div>
-              <h4 className='font-semibold text-purple-800'>Reporting Tools</h4>
-              <p className='text-purple-700 text-sm'>
-                Easy reporting system para sa violations
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-purple-600 text-xl'>🛡️</span>
-            <div>
-              <h4 className='font-semibold text-purple-800'>
-                User Verification
-              </h4>
-              <p className='text-purple-700 text-sm'>
-                ID verification para sa trusted sellers
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-purple-600 text-xl'>⭐</span>
-            <div>
-              <h4 className='font-semibold text-purple-800'>Rating System</h4>
-              <p className='text-purple-700 text-sm'>
-                User ratings para makita ang reputation
-              </p>
-            </div>
-          </div>
-
-          <div className='flex items-start gap-3'>
-            <span className='text-purple-600 text-xl'>👶</span>
-            <div>
-              <h4 className='font-semibold text-purple-800'>
-                Age Restrictions
-              </h4>
-              <p className='text-purple-700 text-sm'>
-                18+ requirement para sa certain categories
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Safety Infographic */}
-    <div className='bg-white rounded-2xl shadow-xl p-8 border border-gray-200'>
-      <h3 className='text-2xl font-bold text-center mb-8 text-gray-800'>
-        TindaMo Safety Checklist ✅
-      </h3>
-
-      <div className='grid md:grid-cols-2 gap-8'>
-        <div>
-          <h4 className='text-lg font-bold text-gray-800 mb-4 flex items-center gap-2'>
-            <span className='text-green-500'>✅</span> Bago Mag-meet
-          </h4>
-          <ul className='space-y-3'>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-sm'>
-                1
-              </span>
-              <span className='text-gray-700'>
-                Verify seller profile at ratings
-              </span>
+          <ul className='space-y-3 text-gray-600'>
+            <li className='flex items-start gap-3'>
+              <span className='text-blue-500 mt-1'>✓</span>
+              <span>Use TindaMo&apos;s in-app messaging only</span>
             </li>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-sm'>
-                2
-              </span>
-              <span className='text-gray-700'>
-                Confirm meetup details via app chat
-              </span>
+            <li className='flex items-start gap-3'>
+              <span className='text-blue-500 mt-1'>✓</span>
+              <span>Never share personal financial information</span>
             </li>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-sm'>
-                3
-              </span>
-              <span className='text-gray-700'>
-                Choose public, mataong na lugar
-              </span>
+            <li className='flex items-start gap-3'>
+              <span className='text-blue-500 mt-1'>✓</span>
+              <span>Be cautious of urgent or pressured requests</span>
             </li>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-sm'>
-                4
-              </span>
-              <span className='text-gray-700'>
-                Inform friend o family ng plans
+            <li className='flex items-start gap-3'>
+              <span className='text-blue-500 mt-1'>✓</span>
+              <span>
+                Trust your instincts - if something feels off, walk away
               </span>
             </li>
           </ul>
         </div>
 
-        <div>
-          <h4 className='text-lg font-bold text-gray-800 mb-4 flex items-center gap-2'>
-            <span className='text-blue-500'>✅</span> During Meetup
-          </h4>
-          <ul className='space-y-3'>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm'>
-                1
-              </span>
-              <span className='text-gray-700'>
-                Check item condition thoroughly
-              </span>
+        {/* User Verification */}
+        <div className='group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105'>
+          <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform'>
+            <Users className='w-8 h-8 text-white' />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            User Verification
+          </h3>
+          <ul className='space-y-3 text-gray-600'>
+            <li className='flex items-start gap-3'>
+              <span className='text-purple-500 mt-1'>✓</span>
+              <span>Look for verified user badges</span>
             </li>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm'>
-                2
-              </span>
-              <span className='text-gray-700'>
-                Test electronics kung functional
-              </span>
+            <li className='flex items-start gap-3'>
+              <span className='text-purple-500 mt-1'>✓</span>
+              <span>Check user ratings and reviews</span>
             </li>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm'>
-                3
-              </span>
-              <span className='text-gray-700'>
-                Kumpleto ang payment bago umalis
-              </span>
+            <li className='flex items-start gap-3'>
+              <span className='text-purple-500 mt-1'>✓</span>
+              <span>Verify profile photos match the person</span>
             </li>
-            <li className='flex items-center gap-3'>
-              <span className='w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm'>
-                4
-              </span>
-              <span className='text-gray-700'>
-                Rate ang seller after transaction
-              </span>
+            <li className='flex items-start gap-3'>
+              <span className='text-purple-500 mt-1'>✓</span>
+              <span>Report suspicious or fake profiles</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Item Authenticity */}
+        <div className='group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105'>
+          <div className='w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform'>
+            <Star className='w-8 h-8 text-white' />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Item Authenticity
+          </h3>
+          <ul className='space-y-3 text-gray-600'>
+            <li className='flex items-start gap-3'>
+              <span className='text-yellow-500 mt-1'>✓</span>
+              <span>Request detailed photos of items</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-yellow-500 mt-1'>✓</span>
+              <span>Ask about item condition and history</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-yellow-500 mt-1'>✓</span>
+              <span>Test electronics and appliances</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-yellow-500 mt-1'>✓</span>
+              <span>Be wary of prices that seem too good to be true</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Community Respect */}
+        <div className='group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105'>
+          <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform'>
+            <Heart className='w-8 h-8 text-white' />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Community Respect
+          </h3>
+          <ul className='space-y-3 text-gray-600'>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-500 mt-1'>✓</span>
+              <span>Be punctual and respectful of others&apos; time</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-500 mt-1'>✓</span>
+              <span>Communicate clearly and honestly</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-500 mt-1'>✓</span>
+              <span>Follow Filipino values of pakikipagkapwa</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-500 mt-1'>✓</span>
+              <span>Resolve disputes amicably</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Red Flags */}
+        <div className='group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105'>
+          <div className='w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform'>
+            <AlertTriangle className='w-8 h-8 text-white' />
+          </div>
+          <h3 className='text-xl font-bold text-gray-900 mb-4'>
+            Red Flags to Watch
+          </h3>
+          <ul className='space-y-3 text-gray-600'>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-600 mt-1'>⚠</span>
+              <span>Requests for personal financial information</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-600 mt-1'>⚠</span>
+              <span>Pressure to meet in isolated locations</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-600 mt-1'>⚠</span>
+              <span>Unwillingness to show item in person</span>
+            </li>
+            <li className='flex items-start gap-3'>
+              <span className='text-red-600 mt-1'>⚠</span>
+              <span>Aggressive or threatening behavior</span>
             </li>
           </ul>
         </div>
       </div>
-    </div>
 
-    {/* Emergency Contact */}
-    <div className='bg-red-50 border border-red-200 rounded-2xl p-6 text-center'>
-      <h3 className='text-xl font-bold text-red-800 mb-2'>
-        Emergency o May Problem?
-      </h3>
-      <p className='text-red-700 mb-4'>
-        Kung may emergency o suspicious activity kayo during transactions:
-      </p>
-      <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-        <a
-          href='tel:911'
-          className='bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors'
-        >
-          🚨 Call 911 (Emergency)
-        </a>
-        <Link
-          href='/support'
-          className='bg-red-100 text-red-800 px-6 py-3 rounded-lg font-bold hover:bg-red-200 transition-colors border border-red-300'
-        >
-          📞 Contact TindaMo Support
-        </Link>
+      {/* Safety Tips Section */}
+      <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white relative overflow-hidden'>
+        {/* Background decoration */}
+        <div className='absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16'></div>
+        <div className='absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12'></div>
+
+        <div className='relative z-10'>
+          <div className='text-center mb-8'>
+            <div className='w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4'>
+              <Shield className='w-8 h-8 text-white' />
+            </div>
+            <h3 className='text-2xl font-bold mb-4'>
+              Remember: Safety is Kapamilya
+            </h3>
+            <p className='text-blue-100 max-w-3xl mx-auto'>
+              In Filipino culture, we protect our kapamilya. Every member of our
+              community deserves to feel safe and respected. If you ever feel
+              uncomfortable or unsafe, trust your instincts and walk away.
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <div className='text-center group hover:bg-white/10 p-4 rounded-xl transition-all duration-300'>
+              <div className='w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3'>
+                <span className='text-white text-xl'>🛡️</span>
+              </div>
+              <h4 className='font-semibold mb-2'>Trust Your Gut</h4>
+              <p className='text-sm text-blue-100'>
+                If something doesn&apos;t feel right, it probably isn&apos;t
+              </p>
+            </div>
+            <div className='text-center group hover:bg-white/10 p-4 rounded-xl transition-all duration-300'>
+              <div className='w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3'>
+                <span className='text-white text-xl'>📞</span>
+              </div>
+              <h4 className='font-semibold mb-2'>Stay Connected</h4>
+              <p className='text-sm text-blue-100'>
+                Let someone know where you&apos;re going and when
+              </p>
+            </div>
+            <div className='text-center group hover:bg-white/10 p-4 rounded-xl transition-all duration-300'>
+              <div className='w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3'>
+                <span className='text-white text-xl'>🚨</span>
+              </div>
+              <h4 className='font-semibold mb-2'>Report Issues</h4>
+              <p className='text-sm text-blue-100'>
+                Help keep our community safe by reporting problems
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    {/* Community Stats */}
-    <div className='bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-200'>
-      <h3 className='text-2xl font-bold text-center mb-8 text-gray-800'>
-        Trusted ng Filipino Community 🇵🇭
-      </h3>
-
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-6 text-center'>
-        <div>
-          <div className='text-3xl font-bold text-yellow-600'>10,000+</div>
-          <div className='text-sm text-gray-600'>Safe Transactions</div>
-        </div>
-        <div>
-          <div className='text-3xl font-bold text-orange-600'>95%</div>
-          <div className='text-sm text-gray-600'>User Satisfaction</div>
-        </div>
-        <div>
-          <div className='text-3xl font-bold text-red-600'>24/7</div>
-          <div className='text-sm text-gray-600'>Support Available</div>
-        </div>
-        <div>
-          <div className='text-3xl font-bold text-green-600'>0</div>
-          <div className='text-sm text-gray-600'>Major Incidents</div>
+      {/* Emergency Contact */}
+      <div className='text-center mt-12'>
+        <div className='bg-white rounded-2xl p-6 shadow-lg border border-gray-100 max-w-2xl mx-auto'>
+          <div className='w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+            <AlertTriangle className='w-6 h-6 text-red-600' />
+          </div>
+          <h4 className='font-bold text-gray-900 mb-2'>Need Help?</h4>
+          <p className='text-gray-600 mb-4'>
+            If you encounter any safety issues or suspicious activity, please
+            report it immediately through our app or contact support.
+          </p>
+          <button className='bg-red-600 text-white px-6 py-2 rounded-xl font-semibold hover:bg-red-700 transition-colors'>
+            Report Safety Issue
+          </button>
         </div>
       </div>
     </div>

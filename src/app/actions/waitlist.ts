@@ -1,5 +1,9 @@
 'use server'
 
+import {
+  getMailchimpMemberPosition,
+  getMailchimpWaitlistCount
+} from '@/lib/mailchimp'
 import { z } from 'zod'
 
 // WAITLIST INTEGRATION GUIDE
@@ -41,9 +45,6 @@ export async function joinWaitlist(
     console.log(
       `Waitlist signup request: ${validatedData.email} from ${validatedData.location}`
     )
-
-    // Generate a waitlist number (in a real app, this would come from a database)
-    const waitlistNumber = Math.floor(Math.random() * 1000) + 1
 
     // === MAILCHIMP INTEGRATION ===
     const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY
@@ -92,6 +93,12 @@ export async function joinWaitlist(
           }
         }
 
+        // Get the real waitlist position for this user
+        const positionResult = await getMailchimpMemberPosition(
+          validatedData.email
+        )
+        const waitlistNumber = positionResult.position || 1
+
         // Also log to internal system as a backup
         await sendNotificationToTeam(validatedData, waitlistNumber)
 
@@ -113,7 +120,10 @@ export async function joinWaitlist(
       }
     }
 
-    // Fallback if Mailchimp is not configured
+    // Fallback if Mailchimp is not configured - get current count for position
+    const countResult = await getMailchimpWaitlistCount()
+    const waitlistNumber = countResult.count + 1 // New member would be next in line
+
     console.warn(
       'Mailchimp environment variables not set. Falling back to local notification.'
     )

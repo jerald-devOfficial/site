@@ -1,5 +1,6 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import WaitlistCount from '@/components/waitlist-count'
 import WaitlistSignup from '@/components/waitlist-signup'
 import type { Metadata } from 'next'
 
@@ -54,29 +55,31 @@ export default function WaitlistPage() {
               community.
             </p>
 
-            {/* Social proof */}
-            <div className='flex flex-wrap justify-center items-center gap-6 sm:gap-8 text-lg text-gray-600 mb-12'>
+            {/* Social proof - Updated to remove fake stats */}
+            <div className='flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm sm:text-base text-gray-600 mb-8'>
               <div className='flex items-center gap-3'>
                 <span className='text-3xl'>👥</span>
                 <div className='text-left'>
                   <div className='font-bold text-2xl text-[#F5A623]'>
-                    2,500+
+                    <WaitlistCount />
                   </div>
                   <div className='text-sm'>people waiting</div>
                 </div>
               </div>
               <div className='flex items-center gap-3'>
-                <span className='text-3xl'>📍</span>
+                <span className='text-3xl'>🇵🇭</span>
                 <div className='text-left'>
-                  <div className='font-bold text-2xl text-[#F5A623]'>15+</div>
-                  <div className='text-sm'>cities covered</div>
+                  <div className='font-bold text-2xl text-[#F5A623]'>
+                    Filipino
+                  </div>
+                  <div className='text-sm'>community focused</div>
                 </div>
               </div>
               <div className='flex items-center gap-3'>
-                <span className='text-3xl'>⭐</span>
+                <span className='text-3xl'>⚡</span>
                 <div className='text-left'>
-                  <div className='font-bold text-2xl text-[#F5A623]'>4.9/5</div>
-                  <div className='text-sm'>expected rating</div>
+                  <div className='font-bold text-2xl text-[#F5A623]'>Early</div>
+                  <div className='text-sm'>access perks</div>
                 </div>
               </div>
             </div>
@@ -84,7 +87,7 @@ export default function WaitlistPage() {
         </section>
 
         {/* Main Content */}
-        <section className='py-16 sm:py-24'>
+        <section className='w-full py-16 sm:py-24'>
           <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-start'>
               {/* Left side - Benefits and Features */}
@@ -119,8 +122,8 @@ export default function WaitlistPage() {
                           Exclusive Perks
                         </h3>
                         <p className='text-gray-600'>
-                          Get special discounts, free features, VIP treatment,
-                          and exclusive access to premium marketplace features.
+                          Get special launch discounts, premium features for
+                          free, and VIP customer support as a founding member.
                         </p>
                       </div>
                     </div>
@@ -131,12 +134,12 @@ export default function WaitlistPage() {
                       </div>
                       <div>
                         <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                          Shape the Future
+                          Shape the Platform
                         </h3>
                         <p className='text-gray-600'>
-                          Help us build the perfect marketplace for your
-                          community. Your feedback will directly influence
-                          TindaMo&apos;s features and development.
+                          Your feedback will directly influence TindaMo&apos;s
+                          features and development. Help us build the perfect
+                          marketplace for Filipino communities.
                         </p>
                       </div>
                     </div>
@@ -147,12 +150,11 @@ export default function WaitlistPage() {
                       </div>
                       <div>
                         <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                          Priority Support
+                          Community Building
                         </h3>
                         <p className='text-gray-600'>
-                          Get dedicated customer support when you need help. Our
-                          team will be there to assist you every step of the
-                          way.
+                          Connect with like-minded Filipinos in your area and
+                          get invited to exclusive community events and meetups.
                         </p>
                       </div>
                     </div>
@@ -191,30 +193,14 @@ export default function WaitlistPage() {
                   </ul>
                 </div>
 
-                {/* Progress indicator */}
-                <div className='bg-white p-6 rounded-xl shadow-sm border border-gray-100'>
-                  <div className='flex items-center justify-between mb-4'>
-                    <span className='text-lg font-medium text-gray-700'>
-                      Waitlist Progress
-                    </span>
-                    <span className='text-2xl font-bold text-[#F5A623]'>
-                      2,500+
-                    </span>
-                  </div>
-                  <div className='w-full bg-gray-200 rounded-full h-3 mb-2'>
-                    <div
-                      className='bg-gradient-to-r from-[#F5A623] to-[#F7931E] h-3 rounded-full transition-all duration-500'
-                      style={{ width: '75%' }}
-                    ></div>
-                  </div>
-                  <p className='text-sm text-gray-500'>
-                    Goal: 5,000 early adopters • 75% complete
-                  </p>
+                {/* Progress indicator with real data */}
+                <div className='bg-gray-50 p-6 rounded-xl border border-gray-100'>
+                  <WaitlistCount showProgress={true} goalCount={5000} />
                 </div>
               </div>
 
               {/* Right side - Signup form */}
-              <div className='bg-white rounded-2xl shadow-xl p-8 border border-gray-100 sticky top-8'>
+              <div className='bg-white rounded-2xl shadow-xl p-8 border border-gray-100'>
                 <div className='text-center mb-8'>
                   <h2 className='text-3xl font-bold text-gray-900 mb-3'>
                     Join the Waitlist
@@ -246,7 +232,7 @@ export default function WaitlistPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className='py-16 bg-gray-50'>
+        <section className='w-full bg-gray-50 py-16 sm:py-24'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
             <h2 className='text-3xl font-bold text-gray-900 text-center mb-12'>
               Frequently Asked Questions
@@ -286,11 +272,35 @@ export default function WaitlistPage() {
 
               <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-100'>
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                  Can I unsubscribe from the waitlist?
+                  How will I know when you launch in my area?
                 </h3>
                 <p className='text-gray-600'>
-                  Yes, you can unsubscribe at any time by clicking the
-                  unsubscribe link in our emails or contacting our support team.
+                  We&apos;ll send you an email notification as soon as TindaMo
+                  becomes available in your location. You&apos;ll also receive
+                  regular updates on our launch progress.
+                </p>
+              </div>
+
+              <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-100'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                  Can I change my location later?
+                </h3>
+                <p className='text-gray-600'>
+                  Absolutely! You can update your preferences anytime by
+                  contacting our support team or through your account settings
+                  once the platform launches.
+                </p>
+              </div>
+
+              <div className='bg-white p-6 rounded-lg shadow-sm border border-gray-100'>
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>
+                  What makes TindaMo different from other marketplaces?
+                </h3>
+                <p className='text-gray-600'>
+                  TindaMo is specifically designed for Filipino communities with
+                  hyper-local focus, barter trading options, and cultural
+                  understanding. We prioritize safety, community building, and
+                  keeping transactions within neighborhoods.
                 </p>
               </div>
             </div>
